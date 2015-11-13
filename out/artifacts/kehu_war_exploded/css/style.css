@@ -2,9 +2,10 @@
 
 html,body{
     background-color: rgb(235,244,241);
-    font-family: "microsoft yahei";
+    font-family: "幼圆","microsoft yahei",arial;
     height: 100%;
     margin: 0;
+    min-width: 1000px;
     padding: 0;
     width: 100%;
 }
@@ -58,6 +59,7 @@ a{
 .title{
     background-color: rgb(94,206,184);
     height: 50px;
+    word-wrap: 
     width: inherit;
 }
 
@@ -75,7 +77,7 @@ a{
     height: 40px;
     position: relative;
     top: 5px;
-    width: 400px;
+    width: 300px;
 }
 
 .submit{
@@ -93,18 +95,19 @@ a{
 
 #ts_search{
     border: 0px solid;
+    border-radius: 5px;
     font-size: 16px;
     height: 40px;
     margin-bottom: 5px;
     outline: none;
     text-indent: 3px;
-    width: 350px;
+    width: 250px;
 }
 
 .change_content{
     float: left;
     height: inherit;
-    width: 250px;
+    width: 200px;
 }
 
 .change_content a:hover{
@@ -114,6 +117,7 @@ a{
 .ccp_now{
     color: white;
     float: left;
+    font-size: 18px;
     height: inherit;
     line-height: 50px;
     left: 30px;
@@ -127,6 +131,7 @@ a{
     background-color: #55B6A2;
     color: white;
     float: left;
+    font-size: 18px;
     height: inherit;
     line-height: 50px;
     left: 30px;
@@ -147,7 +152,6 @@ a{
 }
 
 .title_right a{
-    font-size: 18px;
     float: right;
     line-height: 50px;
     margin: 0 10px 0 0;
@@ -156,7 +160,7 @@ a{
 }
 
 .title_right a:hover{
-    color: #8EE5EE;
+    color: #FFEC8B;
 }
 
 /**
@@ -166,37 +170,37 @@ a{
 .content{
     height: 1000px;
     left: 50%;
-    margin-left: -600px;
+    margin-left: -500px;
     margin-top: 30px;
     position: relative;
-    width: 1200px;
+    width: 1000px;
 }
 /**
  * 左侧的样式
  */
-.c_left{
+.c_top{
     border: 1px solid #ddd;
     background-color: white;
     border-radius: 5px;
     display: inline-block;
     float: left;
-    height: 950px;
-    width: 748px;
+    height: 880px;
+    width: 588px;
 }
 
-.cl_top{
+.ct_top{
     border-bottom: 1px solid #ddd;
     height: 60px;
     width: inherit;
 }
 
-.cll_div{
+.ctl_div{
     float: left;
     height: inherit;
     width: 80px;
 }
 
-.cll_div p{
+.ctl_div p{
     color: rgb(94,206,184);
     font-family: Arial;
     font-size: 20px;
@@ -207,13 +211,13 @@ a{
     width: inherit;
 }
 
-.clr_div{
+.ctr_div{
     float: right;
     height: inherit;
     width: 300px;
 }
 
-.clr_div ul li:hover{
+.ctr_div ul li:hover{
     cursor: pointer;
 }
 
@@ -232,11 +236,11 @@ a{
     top: 30px;
 }
 
-.cl_down{
+.ct_down{
     border-bottom: 1px solid #ccc;
     height: 800px;
-    margin-left: 14px;
-    width: 720px;
+    margin-left: 10px;
+    width: 568px;
 }
 
 .div_show{
@@ -259,15 +263,16 @@ a{
     background-color: white;
     display: inline-block;
     float: left;
-    height: 400px; 
+    height: 450px; 
     margin-left: 20px;
-    width: 428px;
+    width: 388px;
 }
 
 .c_right p{
     color: rgb(117,220,210);
     height: 25px;
     line-height: 25px;
+    margin: 15px 0;
     text-align: center;
     width: inherit;
 }
@@ -285,7 +290,7 @@ a{
     height: 35px;
     margin-left: 14px;
     text-indent: 3px;
-    width: 400px;
+    width: 360px;
 }
 
 .p_form form label{
@@ -302,7 +307,20 @@ a{
     margin-left: 14px;
     padding: 3px 0 0 3px;
     resize:none;
-    width: 394px;
+    width: 358px;
+}
+
+.p_form form input[type="submit"]{
+    background-color: rgb(95,205,183);
+    border: 0px solid;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    font-size: 13px;
+    height: 35px;
+    margin: 5px 10px 0 0;
+    text-indent: -2px;
+    width: 65px;
 }
 
 /**

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>登录与注册页面</title>
+    <link rel="stylesheet" type="text/css" href="css/rigist.css">
+    <script type="text/javascript" src="js/rigist.js"></script>
+</head>
+<body>
+    <div class="title">
+        <p>欢迎光临</p>
+    </div>
+    <div class="myform">
+        <div class="choose">
+            <p class="pbefore" id="choose1" onclick="pchange(1)">登录</p>
+            <p class="pchange" id="choose2" onclick="pchange(2)">注册</p>
+        </div>
+        <div id="view1" class="viewn">
+            <form class="f1" action="" method="post">
+                <input type="account" name="account" placeholder="账号"><br>
+                <input type="password" name="password" placeholder="密码"><br>
+                <input type="submit" value="提交">
+                <input type="reset" value="重置">
+            </form>
+        </div>
+        <div id="view2" class="view">
+            <form class="f1" action="" method="post">
+                <input type="text" name="text" placeholder="姓名"><br>
+                <input type="account" name="account" placeholder="账号"><br>
+                <input type="password" name="password" placeholder="密码"><br>
+                <input type="submit" value="提交">
+                <input type="reset" value="重置">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

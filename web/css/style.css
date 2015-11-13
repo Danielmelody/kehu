@@ -33,7 +33,7 @@ textarea:-ms-input-placeholder {
     font-size: 14px;
 }
 
-ul{
+ul,p{
     margin: 0;
 }
 
@@ -57,7 +57,7 @@ a{
  */
 .title{
     background-color: rgb(94,206,184);
-    height: 65px;
+    height: 50px;
     width: inherit;
 }
 
@@ -69,35 +69,36 @@ a{
 }
 
 .title_search{
+    background-color: white;
+    border-radius: 5px;
     float: left;
-    height: inherit;
+    height: 40px;
+    position: relative;
+    top: 5px;
     width: 400px;
 }
 
 .submit{
-    border: 1px solid #ccc;
+    background-image: url("../img/search.png");
+    background-color: #EAF2F0;
+    background-repeat: no-repeat;
+    background-position: 11px 8px;
+    border: 0px solid;
     border-radius: 5px;
     float: right;
-    font-family: "幼圆",Arial,"microsoft yahei";
-    font-size: 20px;
     height: 40px;
-    margin: 12.5px 17px 0 0;
-    text-align: center;
-    width: 70px;
-}
-
-.search{
-    font-size: 20px;
-    text-indent: 3px;
-}
+    position: relative;
+    width: 46px;
+}   
 
 #ts_search{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+    border: 0px solid;
+    font-size: 16px;
     height: 40px;
-    margin: 12.5px 0 0 5px;
-    width: 300px;
+    margin-bottom: 5px;
+    outline: none;
+    text-indent: 3px;
+    width: 350px;
 }
 
 .change_content{
@@ -111,31 +112,28 @@ a{
 }
 
 .ccp_now{
-    border-radius: 5px;
     color: white;
     float: left;
-    height: 50px;
+    height: inherit;
     line-height: 50px;
-    margin: 0 10px;
-    opacity: 0.6;
+    left: 30px;
+    opacity: 0.8;
     position: relative;
     text-align: center;
-    top: 7.5px;
-    width: 80px;
+    width: 60px;
 }
 
 .ccp_focus{
-    background-color: rgb(188,231,224);
-    border-radius: 5px;
-    color: rgb(94,206,184);
+    background-color: #55B6A2;
+    color: white;
     float: left;
-    height: 50px;
+    height: inherit;
     line-height: 50px;
-    margin: 0 10px;
+    left: 30px;
+    opacity: 0.8;
     position: relative;
     text-align: center;
-    top: 7.5px;
-    width: 80px;
+    width: 60px;
 }
 
 .change_content p:hover{
@@ -143,7 +141,7 @@ a{
 }
 
 .title_right{
-    float: right;
+    float: left;
     height: inherit;
     width: 300px;
 }
@@ -151,8 +149,10 @@ a{
 .title_right a{
     font-size: 18px;
     float: right;
-    line-height: 65px;
+    line-height: 50px;
     margin: 0 10px 0 0;
+    position: relative;
+    right: 100px;
 }
 
 .title_right a:hover{

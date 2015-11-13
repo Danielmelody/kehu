@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+html,body{
+    background-color: rgb(235,244,241);
+    font-family: "microsoft yahei";
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+input:placeholder,
+textarea:placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+ul,p{
+    margin: 0;
+}
+
+li{
+    float: left;
+    height: 30px;
+    list-style: none;
+    margin-left: 20px;
+}
+
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+.clear{
+    clear: both;
+}
+/**
+ * 以下为样式
+ */
+.title{
+    background-color: rgb(94,206,184);
+    height: 50px;
+    width: inherit;
+}
+
+.set_word{
+/*    background-color: yellow;*/
+    float: left;
+    height: inherit;
+    width: 300px;
+}
+
+.title_search{
+    background-color: white;
+    border-radius: 5px;
+    float: left;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    width: 400px;
+}
+
+.submit{
+    background-image: url("../img/search.png");
+    background-color: #EAF2F0;
+    background-repeat: no-repeat;
+    background-position: 11px 8px;
+    border: 0px solid;
+    border-radius: 5px;
+    float: right;
+    height: 40px;
+    position: relative;
+    width: 46px;
+}   
+
+#ts_search{
+    border: 0px solid;
+    font-size: 16px;
+    height: 40px;
+    margin-bottom: 5px;
+    outline: none;
+    text-indent: 3px;
+    width: 350px;
+}
+
+.change_content{
+    float: left;
+    height: inherit;
+    width: 250px;
+}
+
+.change_content a:hover{
+    cursor: pointer;
+}
+
+.ccp_now{
+    color: white;
+    float: left;
+    height: inherit;
+    line-height: 50px;
+    left: 30px;
+    opacity: 0.8;
+    position: relative;
+    text-align: center;
+    width: 60px;
+}
+
+.ccp_focus{
+    background-color: #55B6A2;
+    color: white;
+    float: left;
+    height: inherit;
+    line-height: 50px;
+    left: 30px;
+    opacity: 0.8;
+    position: relative;
+    text-align: center;
+    width: 60px;
+}
+
+.change_content p:hover{
+    cursor: pointer;
+}
+
+.title_right{
+    float: left;
+    height: inherit;
+    width: 300px;
+}
+
+.title_right a{
+    font-size: 18px;
+    float: right;
+    line-height: 50px;
+    margin: 0 10px 0 0;
+    position: relative;
+    right: 100px;
+}
+
+.title_right a:hover{
+    color: #8EE5EE;
+}
+
+/**
+ * 内容样式
+ */
+
+.content{
+    height: 1000px;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: 30px;
+    position: relative;
+    width: 1200px;
+}
+/**
+ * 左侧的样式
+ */
+.c_left{
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+    float: left;
+    height: 950px;
+    width: 748px;
+}
+
+.cl_top{
+    border-bottom: 1px solid #ddd;
+    height: 60px;
+    width: inherit;
+}
+
+.cll_div{
+    float: left;
+    height: inherit;
+    width: 80px;
+}
+
+.cll_div p{
+    color: rgb(94,206,184);
+    font-family: Arial;
+    font-size: 20px;
+    height: inherit;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+    width: inherit;
+}
+
+.clr_div{
+    float: right;
+    height: inherit;
+    width: 300px;
+}
+
+.clr_div ul li:hover{
+    cursor: pointer;
+}
+
+.li_now{
+    color: #999;
+    left: 50px;
+    position: relative;
+    top: 30px;
+}
+
+.li_change{
+    border-bottom: 1px solid rgb(94,206,184);
+    color: #333;
+    left: 50px;
+    position: relative;
+    top: 30px;
+}
+
+.cl_down{
+    border-bottom: 1px solid #ccc;
+    height: 800px;
+    margin-left: 14px;
+    width: 720px;
+}
+
+.div_show{
+ /*   background-color: red;*/
+    color: #333;
+    height: 750px;
+    width: inherit;
+}
+
+.div_hidden{
+    display: none;
+}
+
+/**
+ * 右侧的样式
+ */
+.c_right{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    display: inline-block;
+    float: left;
+    height: 400px; 
+    margin-left: 20px;
+    width: 428px;
+}
+
+.c_right p{
+    color: rgb(117,220,210);
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: inherit;
+}
+
+.p_form{
+    height: 360px;
+    width: inherit;
+}
+
+.p_form form input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    font-size: 15px;
+    height: 35px;
+    margin-left: 14px;
+    text-indent: 3px;
+    width: 400px;
+}
+
+.p_form form label{
+    color: #666;
+    display: block;
+    margin: 30px 0 5px 14px;
+}
+
+.p_form form textarea{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 130px;
+    margin-left: 14px;
+    padding: 3px 0 0 3px;
+    resize:none;
+    width: 394px;
+}
+
+/**
+ * 第二块模板
+ */
+
+.content1{
+    background-color: red;
+    display: none;
+    height: 1000px;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: 30px;
+    position: relative;
+    width: 1200px;
+}

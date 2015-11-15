@@ -1,8 +1,8 @@
 @charset "utf-8";
-
-html,body{
-    background-color: rgb(235,244,241);
-    font-family: "幼圆","microsoft yahei",arial;
+html,
+body {
+    background-color: rgb(235, 244, 241);
+    font-family: "幼圆", "microsoft yahei", arial;
     height: 100%;
     margin: 0;
     min-width: 1000px;
@@ -16,8 +16,8 @@ textarea::-webkit-input-placeholder {
     font-size: 14px;
 }
 
-input:placeholder,
-textarea:placeholder {
+input:-moz-placeholder,
+textarea:-moz-placeholder {
     color: #666;
     font-size: 14px;
 }
@@ -34,43 +34,51 @@ textarea:-ms-input-placeholder {
     font-size: 14px;
 }
 
-ul,p{
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+p {
     margin: 0;
 }
 
-li{
+li {
     float: left;
     height: 30px;
     list-style: none;
     margin-left: 20px;
 }
 
-a{
+a {
     color: #666;
     text-decoration: none;
 }
 
-.clear{
+.clear {
     clear: both;
 }
+
+
 /**
  * 以下为样式
  */
-.title{
-    background-color: rgb(94,206,184);
+
+.title {
+    background-color: rgb(94, 206, 184);
     height: 50px;
-    word-wrap: 
     width: inherit;
 }
 
-.set_word{
-/*    background-color: yellow;*/
+.set_word {
+    /*    background-color: yellow;*/
     float: left;
     height: inherit;
     width: 300px;
 }
 
-.title_search{
+.title_search {
     background-color: white;
     border-radius: 5px;
     float: left;
@@ -80,7 +88,7 @@ a{
     width: 300px;
 }
 
-.submit{
+.submit {
     background-image: url("../img/search.png");
     background-color: #EAF2F0;
     background-repeat: no-repeat;
@@ -91,9 +99,9 @@ a{
     height: 40px;
     position: relative;
     width: 46px;
-}   
+}
 
-#ts_search{
+#ts_search {
     border: 0px solid;
     border-radius: 5px;
     font-size: 16px;
@@ -104,17 +112,17 @@ a{
     width: 250px;
 }
 
-.change_content{
+.change_content {
     float: left;
     height: inherit;
     width: 200px;
 }
 
-.change_content a:hover{
+.change_content a:hover {
     cursor: pointer;
 }
 
-.ccp_now{
+.ccp_now {
     color: white;
     float: left;
     font-size: 18px;
@@ -127,7 +135,7 @@ a{
     width: 60px;
 }
 
-.ccp_focus{
+.ccp_focus {
     background-color: #55B6A2;
     color: white;
     float: left;
@@ -141,17 +149,17 @@ a{
     width: 60px;
 }
 
-.change_content p:hover{
+.change_content p:hover {
     cursor: pointer;
 }
 
-.title_right{
+.title_right {
     float: right;
     height: inherit;
     width: 200px;
 }
 
-.title_right a{
+.title_right a {
     float: right;
     line-height: 50px;
     margin: 0 10px 0 0;
@@ -159,15 +167,16 @@ a{
     right: 100px;
 }
 
-.title_right a:hover{
+.title_right a:hover {
     color: #FFEC8B;
 }
+
 
 /**
  * 内容样式
  */
 
-.content{
+.content {
     height: 1000px;
     left: 50%;
     margin-left: -500px;
@@ -175,10 +184,9 @@ a{
     position: relative;
     width: 1000px;
 }
-/**
- * 左侧的样式
- */
-.c_top{
+
+/*左侧的样式*/
+.c_top {
     border: 1px solid #ddd;
     background-color: white;
     border-radius: 5px;
@@ -188,20 +196,20 @@ a{
     width: 588px;
 }
 
-.ct_top{
+.ct_top {
     border-bottom: 1px solid #ddd;
     height: 60px;
     width: inherit;
 }
 
-.ctl_div{
+.ctl_div {
     float: left;
     height: inherit;
     width: 80px;
 }
 
-.ctl_div p{
-    color: rgb(94,206,184);
+.ctl_div p {
+    color: rgb(94, 206, 184);
     font-family: Arial;
     font-size: 20px;
     height: inherit;
@@ -211,65 +219,137 @@ a{
     width: inherit;
 }
 
-.ctr_div{
+.ctr_div {
     float: right;
     height: inherit;
     width: 300px;
 }
 
-.ctr_div ul li:hover{
+.ctr_div ul li:hover {
     cursor: pointer;
 }
 
-.li_now{
+.li_now {
     color: #999;
     left: 50px;
     position: relative;
     top: 30px;
 }
 
-.li_change{
-    border-bottom: 1px solid rgb(94,206,184);
+.li_change {
+    border-bottom: 1px solid rgb(94, 206, 184);
     color: #333;
     left: 50px;
     position: relative;
     top: 30px;
 }
 
-.ct_down{
+.ct_down {
     border-bottom: 1px solid #ccc;
     height: 800px;
     margin-left: 10px;
     width: 568px;
 }
 
-.div_show{
- /*   background-color: red;*/
+.div_show {
+    /*   background-color: red;*/
     color: #333;
     height: 750px;
     width: inherit;
 }
 
-.div_hidden{
+.div_hidden {
     display: none;
 }
 
-/**
- * 右侧的样式
- */
-.c_right{
+/*左侧话题内容样式*/
+.d_s_div{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.d_s_d_p{
+    color: rgb(2,130,104);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.float_left {
+    float: left;
+    text-align: center;
+    width: 35px;
+}
+
+.float_left div{
+    border-radius: 3px; 
+}
+
+.f_t_top{
+    background-color: rgb(238,248,246);
+    margin-bottom: 5px;
+    width: inherit;
+}
+
+.f_t_top p{
+    color: rgb(2,130,104);
+    position: relative;
+    top: -3px;
+}
+
+.f_t_down{
+    background-color: rgb(238,248,246);
+    width: inherit;
+}
+
+.float_right {
+    float: left;
+    margin-left: 10px;
+    width: 515px;
+}
+
+.float_right h4{
+    font-family: "华文仿宋";
+    font-weight: normal;
+}
+
+.float_right p{
+    color: black;
+    line-height: 18px;
+    margin: 5px 0;
+    font-size: 13px;
+    text-indent: 27px;
+}
+
+.f_r_com_div{
+    height: 20px;
+    width: inherit;
+}
+
+.f_r_com_div span{
+    color: #bbb;
+    font-size: 13px;
+}
+
+.f_r_com_div img{
+    margin: 0 -5px 0 5px;
+    position: relative;
+    top: 3px;
+}
+
+/*右侧的样式*/
+.c_right {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: white;
     display: inline-block;
     float: left;
-    height: 450px; 
+    height: 450px;
     margin-left: 20px;
     width: 388px;
 }
 
-.c_right p{
-    color: rgb(117,220,210);
+.c_right p {
+    color: rgb(117, 220, 210);
     height: 25px;
     line-height: 25px;
     margin: 15px 0;
@@ -277,12 +357,12 @@ a{
     width: inherit;
 }
 
-.p_form{
+.p_form {
     height: 360px;
     width: inherit;
 }
 
-.p_form form input{
+.p_form form input {
     border: 1px solid #ccc;
     border-radius: 3px;
     display: block;
@@ -293,25 +373,25 @@ a{
     width: 360px;
 }
 
-.p_form form label{
+.p_form form label {
     color: #666;
     display: block;
     margin: 30px 0 5px 14px;
 }
 
-.p_form form textarea{
+.p_form form textarea {
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 15px;
     height: 130px;
     margin-left: 14px;
     padding: 3px 0 0 3px;
-    resize:none;
+    resize: none;
     width: 358px;
 }
 
-.p_form form input[type="submit"]{
-    background-color: rgb(95,205,183);
+.p_form form input[type="submit"] {
+    background-color: rgb(95, 205, 183);
     border: 0px solid;
     border-radius: 5px;
     color: white;
@@ -323,11 +403,12 @@ a{
     width: 65px;
 }
 
+
 /**
  * 第二块模板
  */
 
-.content1{
+.content1 {
     background-color: red;
     display: none;
     height: 1000px;

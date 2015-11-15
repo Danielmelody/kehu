@@ -25,5 +25,7 @@
     <orderEntry type="library" name="commons-logging-1.1" level="project" />
     <orderEntry type="library" name="velocity-tools-generic-2.0" level="project" />
     <orderEntry type="library" name="velocity-tools-view-2.0" level="project" />
+    <orderEntry type="library" name="velocity-1.7-dep" level="project" />
+    <orderEntry type="library" name="servletapi-2.3" level="project" />
   </component>
 </module>

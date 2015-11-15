@@ -1,10 +1,11 @@
+<DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>华科问答</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script type="text/javascript" src="/js/change.js"></script>
-    <script type="text/javascript" src="/js/rigist.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/change.js"></script>
+    <script type="text/javascript" src="js/rigist.js"></script>
 </head>
 <body>
     <div class="title">
@@ -42,10 +43,6 @@
                     <ul>
                         <li id="page1" class="li_change">最新</li>
                         <li id="page2" class="li_now">热门</li>
-                        #set( $foo = "Velocity" )
-
-                        <li id="testVelo" class="li_test">$foo</li>
-
                         <li id="page3" class="li_now">等待回复</li>
 
                     </ul>
@@ -53,9 +50,14 @@
             </div>
 
             <div class="ct_down">
+
+
+
+
                 <div class="div_show" id="cld_div1">
+                    #foreach ($name in ${questionList})
                     <div class="d_s_div"><!--所有主贴用这个class的样式-->
-                        <p class="d_s_d_p">华中科技大学研究生考试时间是什么时候？初试跟复试的</p>
+                        <p class="d_s_d_p">${name}</p>
                         <div class="float_left">
                             <div class="f_t_top">
                                 <img src="img/up.png">
@@ -79,7 +81,13 @@
                         </div>
                         <div class="clear"><!--此处是清除浮动的块--></div>
                     </div>
+                    #end
                 </div>
+
+
+
+
+
                 <div class="div_hidden" id="cld_div2">
                     222
                 </div>
@@ -87,6 +95,8 @@
                     333
                 </div>
             </div>
+
+
         <div class="clear"></div>
         </div>
 

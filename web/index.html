@@ -1,18 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: huyiming
-  Date: 15/11/13
-  Time: 下午7:18
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
     <title>华科问答</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/change.js"></script>
-    <script type="text/javascript" src="js/rigist.js"></script>
+    <link rel="stylesheet" type="text/css" href="../src/template/css/style.css">
+    <script type="text/javascript" src="../src/template/js/change.js"></script>
+    <script type="text/javascript" src="../src/template/js/rigist.js"></script>
 </head>
 <body>
     <div class="title">
@@ -30,10 +22,11 @@
         <div class="change_content">
             <a id="cc_p1" class="ccp_focus">发现</a>
             <a id="cc_p2" class="ccp_now">话题</a>
+
         </div>
 
         <div class="title_right">
-            <a href="rigister.html">注册</a>
+            <a href="../src/template/rigister.html">注册</a>
             <a href="logon.html">登录</a>
         </div>
     </div>
@@ -49,7 +42,12 @@
                     <ul>
                         <li id="page1" class="li_change">最新</li>
                         <li id="page2" class="li_now">热门</li>
+                        #set( $foo = "Velocity" )
+
+                        <li id="testVelo" class="li_test">$foo</li>
+
                         <li id="page3" class="li_now">等待回复</li>
+
                     </ul>
                 </div>
             </div>

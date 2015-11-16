@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+html,
+body {
+    background-color: rgb(235, 244, 241);
+    font-family: "幼圆", "microsoft yahei", arial;
+    height: 100%;
+    margin: 0;
+    min-width: 1000px;
+    padding: 0;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+li {
+    float: left;
+    height: 30px;
+    list-style: none;
+    margin-left: 20px;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.top{
+    border: 0px solid;
+    height: 50px;
+    scroll-behavior: unset;
+    width: inherit;
+}
+
+/**
+ * 中间部分
+ */
+.content{
+    border: 1px solid #ccc;
+    left: -500px;
+    margin-top: 10px;
+    margin-left: 50%;
+    position: relative;
+    width: 1000px;
+}
+
+.the_head{
+    width: inherit;
+}
+
+/*底部回答框*/
+.the_answer{
+    height: 210px;
+    margin: 10px 0;
+    width: inherit;
+}
+
+.textarea_part{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 150px;
+    margin-left: 20px;
+    resize: none;
+    width: 960px;
+}
+
+.my_submit{
+    background-color: rgb(94, 206, 184);
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    font-size: 16px;
+    height: 45px;
+    margin-right: 15px;
+    margin-top: 8px;
+    width: 80px;
+}

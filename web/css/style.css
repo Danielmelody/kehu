@@ -53,6 +53,7 @@ li {
 
 a {
     color: #666;
+    outline: none;
     text-decoration: none;
 }
 
@@ -60,117 +61,16 @@ a {
     clear: both;
 }
 
-
 /**
- * 以下为样式
+ *  设置iframe
  */
 
-.title {
-    background-color: rgb(94, 206, 184);
+.top{
+    border: 0px solid;
     height: 50px;
+    scroll-behavior: unset;
     width: inherit;
 }
-
-.set_word {
-    /*    background-color: yellow;*/
-    float: left;
-    height: inherit;
-    width: 300px;
-}
-
-.title_search {
-    background-color: white;
-    border-radius: 5px;
-    float: left;
-    height: 40px;
-    position: relative;
-    top: 5px;
-    width: 300px;
-}
-
-.submit {
-    background-image: url("../img/search.png");
-    background-color: #EAF2F0;
-    background-repeat: no-repeat;
-    background-position: 11px 8px;
-    border: 0px solid;
-    border-radius: 5px;
-    float: right;
-    height: 40px;
-    position: relative;
-    width: 46px;
-}
-
-#ts_search {
-    border: 0px solid;
-    border-radius: 5px;
-    font-size: 16px;
-    height: 40px;
-    margin-bottom: 5px;
-    outline: none;
-    text-indent: 3px;
-    width: 250px;
-}
-
-.change_content {
-    float: left;
-    height: inherit;
-    width: 200px;
-}
-
-.change_content a:hover {
-    cursor: pointer;
-}
-
-.ccp_now {
-    color: white;
-    float: left;
-    font-size: 18px;
-    height: inherit;
-    line-height: 50px;
-    left: 30px;
-    opacity: 0.8;
-    position: relative;
-    text-align: center;
-    width: 60px;
-}
-
-.ccp_focus {
-    background-color: #55B6A2;
-    color: white;
-    float: left;
-    font-size: 18px;
-    height: inherit;
-    line-height: 50px;
-    left: 30px;
-    opacity: 0.8;
-    position: relative;
-    text-align: center;
-    width: 60px;
-}
-
-.change_content p:hover {
-    cursor: pointer;
-}
-
-.title_right {
-    float: right;
-    height: inherit;
-    width: 200px;
-}
-
-.title_right a {
-    float: right;
-    line-height: 50px;
-    margin: 0 10px 0 0;
-    position: relative;
-    right: 100px;
-}
-
-.title_right a:hover {
-    color: #FFEC8B;
-}
-
 
 /**
  * 内容样式
@@ -292,6 +192,7 @@ a {
 
 .f_t_top p{
     color: rgb(2,130,104);
+    padding: 5px 0;
     position: relative;
     top: -3px;
 }
@@ -330,10 +231,16 @@ a {
     font-size: 13px;
 }
 
-.f_r_com_div img{
+.comment_pic{
     margin: 0 -5px 0 5px;
     position: relative;
     top: 3px;
+}
+
+.answer_pic{
+    margin: 0 -5px 0 5px;
+    position: relative;
+    top: 2px;
 }
 
 /*右侧的样式*/
@@ -403,6 +310,9 @@ a {
     width: 65px;
 }
 
+.p_form form input[type="submit"]:hover{
+    cursor: pointer;
+}
 
 /**
  * 第二块模板

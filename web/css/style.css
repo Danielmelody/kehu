@@ -62,17 +62,6 @@ a {
 }
 
 /**
- *  设置iframe
- */
-
-.top{
-    border: 0px solid;
-    height: 50px;
-    scroll-behavior: unset;
-    width: inherit;
-}
-
-/**
  * 内容样式
  */
 

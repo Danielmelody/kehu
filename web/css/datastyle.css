@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.clear{
+    clear: both;
+    position: relative;
+}
+
+.d_s_div{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.d_s_d_p{
+    color: rgb(2,130,104);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.d_s_div_middle{
+    max-height: 85px;
+    width: inherit;
+}
+
+.float_left {
+    float: left;
+    text-align: center;
+    width: 35px;
+}
+
+.float_left div{
+    border-radius: 3px; 
+}
+
+.f_t_top{
+    background-color: rgb(238,248,246);
+    margin-bottom: 5px;
+    width: inherit;
+}
+
+.f_t_top p{
+    color: rgb(2,130,104);
+    padding: 5px 0 0 0;
+    position: relative;
+    top: -3px;
+}
+
+.f_t_down{
+    background-color: rgb(238,248,246);
+    width: inherit;
+}
+
+.float_right {
+    float: left;
+    margin-left: 10px;
+    max-height: 180px;
+    overflow: hidden;
+    width: 515px;
+}
+
+.float_right h4{
+    font-family: "华文仿宋";
+    font-weight: normal;
+}
+
+.float_right p{
+    color: black;
+    line-height: 18px;
+    margin: 5px 0;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    text-indent: 27px;
+}
+
+.f_r_com_div{
+    height: 20px;
+    position: relative;
+    width: inherit;
+}
+
+.f_r_com_div span{
+    color: #bbb;
+    font-size: 13px;
+}
+
+.f_r_com_div data{
+    color: #bbb;
+    font-size: 13px;
+}
+
+.comment_pic{
+    margin: 0 -5px 0 5px;
+    position: relative;
+    top: 3px;
+}
+
+.answer_pic{
+    margin: 0 -5px 0 5px;
+    position: relative;
+    top: 2px;
+}

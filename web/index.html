@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <title>华科问答</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/title.css">
     <script type="text/javascript" src="js/change.js"></script>
 </head>
 
 <body>
     <div class="title">
         <div class="set_word">
+            <img src="img/kehu.png">
         </div>
         <div class="title_search">
             <form>
@@ -23,13 +23,26 @@
             <a id="cc_p1" class="ccp_focus">发现</a>
             <a id="cc_p2" class="ccp_now">话题</a>
         </div>
-        <div class="title_right">
+        <div class="title_right" style="display: none;">
             <a href="rigist.html" target="_top">注册</a>
             <a href="login.html" target="_top">登录</a>
         </div>
+        <div class="master_rignt">
+            <div class="m_r_div1">
+                <img src="img/message.png">
+            </div>
+            <div class="m_r_div2">
+                <a href="self.html">
+                    <img src="img/people.png">
+                    <p></p>
+                </a>
+            </div>
+        </div>
     </div>
+
     <div class="content" id="content">
         <div class="c_top">
+
             <div class="ct_top">
                 <div class="ctl_div">
                     <p>发现</p>
@@ -42,45 +55,57 @@
                     </ul>
                 </div>
             </div>
+
             <div class="ct_down">
                 <div class="div_show" id="cld_div1">
+                <!--以下为所发的帖的内容--><!--所有贴用这个class的样式-->
                     <div class="d_s_div">
-                        <!--所有主贴用这个class的样式-->
-                        <p class="d_s_d_p">华中科技大学研究生考试时间是什么时候？初试跟复试的</p>
-                        <div class="float_left">
-                            <div class="f_t_top">
-                                <img src="img/up.png">
-                                <!--这里的img可以在前面加a做链接-->
-                                <p>30</p>
+                        <a href="detail.html">
+                            <p class="d_s_d_p">华中科技大学研究生考试时间是什么时候？初试跟复试的时间</p>
+                        </a>
+                        <div class="d_s_div_middle">
+                            <div class="float_left">
+                                <div class="f_t_top">
+                                    <img src="img/up.png">
+                                    <!--这里的img可以在前面加a做链接-->
+                                    <p>30</p>
+                                </div>
+                                <div class="f_t_down">
+                                    <img src="img/down.png">
+                                </div>
                             </div>
-                            <div class="f_t_down">
-                                <img src="img/down.png">
+                            <div class="float_right">
+                                <h4>秀秀</h4>
+                                <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
+                                <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
+                                <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
                             </div>
                         </div>
-                        <div class="float_right">
-                            <h4>秀秀</h4>
-                            <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
-                            <div class="f_r_com_div">
-                                <img src="img/comment.png" class="comment_pic">
-                                <span>3条评论</span>
-                                <img src="img/answer.png" class="answer_pic">
-                                <a href="detail.html"><span>添加回答</span></a>
-                            </div>
-                        </div>
-                        <div class="clear">
-                            <!--此处是清除浮动的块-->
+                        <div class="clear"></div>
+
+                        <div class="f_r_com_div">
+                            <img src="img/comment.png" class="comment_pic">
+                            <a href="detail.html"><span>3条评论</span></a>
+                            <img src="img/answer.png" class="answer_pic">
+                            <a href="detail.html"><span>添加回答</span></a>
                         </div>
                     </div>
+                <!--以上为所发的帖的内容-->
                 </div>
+
                 <div class="div_hidden" id="cld_div2">
                     222
                 </div>
+
                 <div class="div_hidden" id="cld_div3">
                     333
                 </div>
             </div>
+
             <div class="clear"></div>
+
         </div>
+
         <div class="c_right">
             <p>今天你遇到了什么问题?</p>
             <div class="p_form">
@@ -95,8 +120,12 @@
                 </form>
             </div>
         </div>
+
     </div>
-    <div class="content1" id="content1"></div>
+
+    <div class="content1" id="content1">
+        <p>皆さん、このページは今できませんので、私たちは頑張れます！</p>
+    </div>
 </body>
 
 </html>

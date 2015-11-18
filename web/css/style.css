@@ -1,4 +1,7 @@
 @charset "utf-8";
+@import url("datastyle.css");
+@import url("title.css");
+
 html,
 body {
     background-color: rgb(235, 244, 241);
@@ -66,10 +69,8 @@ a {
  */
 
 .content {
-    height: 1000px;
     left: 50%;
-    margin-left: -500px;
-    margin-top: 30px;
+    margin: 30px 0 10px -500px;
     position: relative;
     width: 1000px;
 }
@@ -81,7 +82,8 @@ a {
     border-radius: 5px;
     display: inline-block;
     float: left;
-    height: 880px;
+    margin-bottom: 10px;
+    /*height: 880px;*/
     width: 588px;
 }
 
@@ -134,16 +136,15 @@ a {
 }
 
 .ct_down {
-    border-bottom: 1px solid #ccc;
-    height: 800px;
+    /*height: 800px;*/
     margin-left: 10px;
     width: 568px;
 }
 
 .div_show {
-    /*   background-color: red;*/
     color: #333;
-    height: 750px;
+    margin-bottom: 10px;
+    min-height: 600px;
     width: inherit;
 }
 
@@ -151,86 +152,7 @@ a {
     display: none;
 }
 
-/*左侧话题内容样式*/
-.d_s_div{
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
-.d_s_d_p{
-    color: rgb(2,130,104);
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.float_left {
-    float: left;
-    text-align: center;
-    width: 35px;
-}
-
-.float_left div{
-    border-radius: 3px; 
-}
-
-.f_t_top{
-    background-color: rgb(238,248,246);
-    margin-bottom: 5px;
-    width: inherit;
-}
-
-.f_t_top p{
-    color: rgb(2,130,104);
-    padding: 5px 0;
-    position: relative;
-    top: -3px;
-}
-
-.f_t_down{
-    background-color: rgb(238,248,246);
-    width: inherit;
-}
-
-.float_right {
-    float: left;
-    margin-left: 10px;
-    width: 515px;
-}
-
-.float_right h4{
-    font-family: "华文仿宋";
-    font-weight: normal;
-}
-
-.float_right p{
-    color: black;
-    line-height: 18px;
-    margin: 5px 0;
-    font-size: 13px;
-    text-indent: 27px;
-}
-
-.f_r_com_div{
-    height: 20px;
-    width: inherit;
-}
-
-.f_r_com_div span{
-    color: #bbb;
-    font-size: 13px;
-}
-
-.comment_pic{
-    margin: 0 -5px 0 5px;
-    position: relative;
-    top: 3px;
-}
-
-.answer_pic{
-    margin: 0 -5px 0 5px;
-    position: relative;
-    top: 2px;
-}
+/*左侧话题内容样式为数据样式，件datastyle.css*/
 
 /*右侧的样式*/
 .c_right {
@@ -281,6 +203,7 @@ a {
     font-size: 15px;
     height: 130px;
     margin-left: 14px;
+    overflow: auto;
     padding: 3px 0 0 3px;
     resize: none;
     width: 358px;
@@ -308,12 +231,15 @@ a {
  */
 
 .content1 {
-    background-color: red;
     display: none;
     height: 1000px;
     left: 50%;
-    margin-left: -600px;
-    margin-top: 30px;
+    margin: 30px 0 10px -500px;
     position: relative;
-    width: 1200px;
+    width: 1000px;
+}
+
+.content1 p{
+    font-size: 18px;
+    text-align: center;
 }

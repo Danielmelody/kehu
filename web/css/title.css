@@ -50,7 +50,13 @@ a {
     /*    background-color: yellow;*/
     float: left;
     height: inherit;
-    width: 300px;
+    width: 280px;
+}
+
+.set_word img{
+    left: 160px;
+    position: relative;
+    top: 8px;
 }
 
 .title_search {
@@ -60,12 +66,11 @@ a {
     height: 40px;
     position: relative;
     top: 5px;
-    width: 300px;
+    width: 320px;
 }
 
 .submit {
     background-image: url("../img/search.png");
-    background-color: #EAF2F0;
     background-repeat: no-repeat;
     background-position: 11px 8px;
     border: 0px solid;
@@ -88,7 +93,7 @@ a {
     margin-bottom: 5px;
     outline: none;
     text-indent: 3px;
-    width: 250px;
+    width: 265px;
 }
 
 .change_content {
@@ -148,4 +153,61 @@ a {
 
 .title_right a:hover {
     color: #FFFFFF;
+}
+
+.master_rignt{
+    float: right;
+    height: inherit;
+    width: 200px;
+}
+
+.the_message{
+    position: relative;
+    top: 10px;
+}
+
+.master_rignt p{
+    background-color: #61c2af;
+    display: inline-block;
+    left: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.master_rignt div{
+    display: inline-block;
+    float: left;
+}
+
+.m_r_div1{
+    height: inherit;
+    width: 30px;
+}
+
+.m_r_div1 img{
+    position: relative;
+    top: 10px;
+}
+
+.m_r_div2{
+    height: inherit;
+    width: 120px;
+}
+
+.m_r_div2 img{
+    left: 5px;
+    position: relative;
+    top: 13px;
+}
+
+.m_r_div2 p{
+    /*background-color: red;*/
+    background-color: #5ECEB8;
+    display: inline-block;
+    float: right;
+    height: 30px;
+    position: relative;
+    right: 10px;
+    top: 10px;
+    width: 70px;
 }

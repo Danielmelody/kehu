@@ -1,0 +1,197 @@
+@import url("title1.css");
+@import url("datastyle.css");
+
+.clear_bottom_line{
+    background-color: white;
+    height: 1px;
+    position: relative;
+    top: -1px;
+    width: inherit;
+}
+
+.d_s_div{
+    left: 10px;
+    position: relative;
+}
+
+/**
+ * 个人信息样式
+ */
+
+.main_content{
+    border: 1px solid #ddd;
+    height: 200px;
+    left: 50%;
+    margin-left: -483px;
+    position: relative;
+    top: 15px;
+    width: 966px;
+}
+
+.self_inf{
+    background-color: white;
+    height: 200px;
+    width: inherit;
+}
+
+.self_inf div{
+    display: inline-block;
+    float: left;
+}
+/*左侧部分*/
+.self_inf_left{
+    height: inherit;
+    width: 170px;
+}
+
+.self_inf_left img[name="pic_1"]{
+    height: 150px;
+    margin: 10px;
+    overflow: hidden;
+    width: 150px;
+}
+
+.self_inf_left a{
+    color: #4a9a8a;
+    font-size: 12px;
+    float: right;
+    margin-right: 10px;
+}
+
+/*右侧部分*/
+.self_inf_right{
+    width: 750px;
+    height: inherit;
+}
+
+.s_i_r_div{
+    border-bottom: 1px solid #eaf2f0;
+    height: 60px;
+    position: relative;
+    top: 15px;
+    width: inherit;
+}
+
+.s_i_r_div h4{
+    font-weight: normal;
+    position: relative;
+    top: 5px;
+}
+
+.s_i_r_div p[name="p_1"],[name="p_2"]{
+    border-right: 1px solid #eaf2f0;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    top: 5px;
+    width: 249px;
+}
+
+.s_i_r_div p[name="p_3"]{
+    display: inline-block;
+    float: left;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    top: 5px;
+    width: 250px;
+}
+
+.s_i_r_div p span{
+    color: #4a9a8a;
+    font-size: 35px;
+    position: relative;
+    top: 2px;
+}
+
+/**
+ * 最近动态样式
+ */
+.activity{
+    border: 1px solid #ddd;
+    background-color: white;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    width: 826px;
+}
+
+.a_title{
+    background-color: #f5fefc;
+    height: 40px;
+    width: inherit;
+}
+
+.a_title p{
+    color: #5fcdb7;
+    font-size: 14px;
+    height: inherit;
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+.now_get{
+    color: #b7bcbb;
+    font-size: 12px;
+    height: 20px;
+    margin-left: 10px; 
+    position: relative;
+    top: 7px;
+}
+
+.question_part{
+    border: 1px solid #ddd;
+    background-color: white;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    width: 826px;
+}
+
+.q_p_div{
+    padding: 10px 0 50px 0;
+    width: inherit;
+}
+
+.q_p_left{
+    background-color: rgb(238,248,246);
+    display: inline-block;
+    float: left;
+    height: 34px;
+    margin-left: 10px;
+    text-align: center;
+    width: 34px;
+}
+
+.q_p_left p{
+    color: #4a9a8a;
+}
+
+.q_p_left p[name="the_answer"]{
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+}
+
+.q_p_right{
+    float: left;
+    left: 10px;
+    position: relative;
+}
+
+.q_p_right h4{
+    color: #028268;
+    font-size: 14px;
+}
+
+.q_p_right data{
+    color: #b7bcbb;
+    font-size: 12px;
+}
+
+.q_p_right span{
+    color: #b7bcbb;
+    font-size: 12px;
+}

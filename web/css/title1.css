@@ -30,7 +30,7 @@ input:-ms-input-placeholder{
     font-size: 14px;
 }
 
-p {
+p,h2,h4 {
     margin: 0;
 }
 
@@ -50,7 +50,13 @@ a {
     /*    background-color: yellow;*/
     float: left;
     height: inherit;
-    width: 300px;
+    width: 280px;
+}
+
+.set_word img{
+    left: 160px;
+    position: relative;
+    top: 8px;
 }
 
 .title_search {
@@ -60,7 +66,7 @@ a {
     height: 40px;
     position: relative;
     top: 5px;
-    width: 300px;
+    width: 320px;
 }
 
 .submit {
@@ -88,7 +94,7 @@ a {
     margin-bottom: 5px;
     outline: none;
     text-indent: 3px;
-    width: 250px;
+    width: 265px;
 }
 
 .change_content {
@@ -101,21 +107,7 @@ a {
     cursor: pointer;
 }
 
-.ccp_focus {
-    color: white;
-    float: left;
-    font-size: 18px;
-    height: inherit;
-    line-height: 50px;
-    left: 30px;
-    opacity: 0.8;
-    position: relative;
-    text-align: center;
-    width: 60px;
-}
-
-.ccp_now {
-    background-color: #55B6A2;
+.ccp {
     color: white;
     float: left;
     font-size: 18px;

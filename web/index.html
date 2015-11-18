@@ -55,9 +55,9 @@
 
 
                 <div class="div_show" id="cld_div1">
-                    #foreach ($name in ${questionList})
+                    #foreach ($question in ${questionList})
                     <div class="d_s_div"><!--所有主贴用这个class的样式-->
-                        <p class="d_s_d_p">${name}</p>
+                        <p class="d_s_d_p">${question.get("title")}</p>
                         <div class="float_left">
                             <div class="f_t_top">
                                 <img src="img/up.png">

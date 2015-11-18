@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<>
 
 <head>
     <meta charset="utf-8">
@@ -58,6 +58,7 @@
 
             <div class="ct_down">
                 <div class="div_show" id="cld_div1">
+<<<<<<< HEAD
                 <!--以下为所发的帖的内容--><!--所有贴用这个class的样式-->
                     <div class="d_s_div">
                         <a href="detail.html">
@@ -79,6 +80,31 @@
                                 <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
                                 <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
                                 <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
+=======
+
+                    #foreach ($question in ${questionList})
+                    <div class="d_s_div"><!--所有主贴用这个class的样式-->
+                        <p class="d_s_d_p">${question.get("title")}</p>
+                        <div class="float_left">
+                            <div class="f_t_top">
+                                <img src="img/up.png">
+                                <!--这里的img可以在前面加a做链接-->
+                                <p>30</p>
+                            </div>
+                            <div class="f_t_down">
+                                <img src="img/down.png">
+                            </div>
+                        </div>
+
+                        <div class="float_right">
+                            <h4>秀秀</h4>
+                            <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
+                            <div class="f_r_com_div">
+                                <img src="img/comment.png" class="comment_pic">
+                                <span>3条评论</span>
+                                <img src="img/answer.png" class="answer_pic">
+                                <a href="detail.html"><span>添加回答</span></a>
+>>>>>>> 0d5a50d955329e068a53d2e71c3801821d322c8e
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -90,7 +116,11 @@
                             <a href="detail.html"><span>添加回答</span></a>
                         </div>
                     </div>
+<<<<<<< HEAD
                 <!--以上为所发的帖的内容-->
+=======
+                    #end
+>>>>>>> 0d5a50d955329e068a53d2e71c3801821d322c8e
                 </div>
 
                 <div class="div_hidden" id="cld_div2">
@@ -127,5 +157,4 @@
         <p>皆さん、このページは今できませんので、私たちは頑張れます！</p>
     </div>
 </body>
-
 </html>

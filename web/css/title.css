@@ -30,7 +30,7 @@ input:-ms-input-placeholder{
     font-size: 14px;
 }
 
-p {
+p,h2,h4 {
     margin: 0;
 }
 
@@ -133,6 +133,19 @@ a {
     width: 60px;
 }
 
+.ccp {
+    color: white;
+    float: left;
+    font-size: 18px;
+    height: inherit;
+    line-height: 50px;
+    left: 30px;
+    opacity: 0.8;
+    position: relative;
+    text-align: center;
+    width: 60px;
+}
+
 .change_content p:hover {
     cursor: pointer;
 }
@@ -161,19 +174,6 @@ a {
     width: 200px;
 }
 
-.the_message{
-    position: relative;
-    top: 10px;
-}
-
-.master_rignt p{
-    background-color: #61c2af;
-    display: inline-block;
-    left: 10px;
-    position: relative;
-    top: 5px;
-}
-
 .master_rignt div{
     display: inline-block;
     float: left;
@@ -191,23 +191,30 @@ a {
 
 .m_r_div2{
     height: inherit;
-    width: 120px;
+    width: 110px;
+}
+
+.m_r_div2:hover{
+    background-color: #55B6A2;
+    cursor: pointer;
 }
 
 .m_r_div2 img{
-    left: 5px;
+    height: 30px;
+    left: 18px;
     position: relative;
-    top: 13px;
+    width: 30px;
+    top: 10px;
 }
 
-.m_r_div2 p{
-    /*background-color: red;*/
-    background-color: #5ECEB8;
+.m_r_div2 a p{
+    color: white;
     display: inline-block;
     float: right;
-    height: 30px;
+    height: 20px;
+    left: 28px;
     position: relative;
     right: 10px;
-    top: 10px;
-    width: 70px;
+    top: 15px;
+    width: 80px;
 }

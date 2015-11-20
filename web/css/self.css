@@ -1,4 +1,4 @@
-@import url("title1.css");
+@import url("title.css");
 @import url("datastyle.css");
 
 .clear_bottom_line{
@@ -159,7 +159,7 @@
     background-color: rgb(238,248,246);
     display: inline-block;
     float: left;
-    height: 34px;
+    height: 40px;
     margin-left: 10px;
     text-align: center;
     width: 34px;
@@ -167,6 +167,7 @@
 
 .q_p_left p{
     color: #4a9a8a;
+    font-family: "microsoft yahei",arial;
 }
 
 .q_p_left p[name="the_answer"]{

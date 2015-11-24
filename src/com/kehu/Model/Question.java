@@ -48,15 +48,12 @@ public class Question extends BaseModel{
     public Question(HashMap<String, String> datas, boolean isNew){
         this.datas = datas;
         this.isNew = isNew;
-    }
-
-
-
-
-
-    @Override
-    public void updateDataFromDataBase() {
-
 
     }
+
+
+
+
+
+
 }

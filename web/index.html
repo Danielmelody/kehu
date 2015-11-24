@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>华科问答</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script type="text/javascript" src="js/change.js"></script>
 </head>
 
@@ -64,33 +64,27 @@
                         <p class="d_s_d_p">${question.get("title")}</p>
                         <div class="float_left">
                             <div class="f_t_top">
-                                <img src="img/up.png">
+                                <img src="/img/up.png">
                                 <!--这里的img可以在前面加a做链接-->
                                 <p>30</p>
                             </div>
                             <div class="f_t_down">
-                                <img src="img/down.png">
+                                <img src="/img/down.png">
                             </div>
                         </div>
 
                         <div class="float_right">
                             <h4>秀秀</h4>
                             <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
-                            <div class="f_r_com_div">
-                                <img src="img/comment.png" class="comment_pic">
-                                <span>3条评论</span>
-                                <img src="img/answer.png" class="answer_pic">
-                                <a href="detail.html"><span>添加回答</span></a>
 
-                            </div>
                         </div>
                         <div class="clear"></div>
 
                         <div class="f_r_com_div">
-                            <img src="img/comment.png" class="comment_pic">
-                            <a href="detail.html"><span>3条评论</span></a>
-                            <img src="img/answer.png" class="answer_pic">
-                            <a href="detail.html"><span>添加回答</span></a>
+                            <img src="/img/comment.png" class="comment_pic">
+                            <a href="/q/${question.get('id')}"><span>3条评论</span></a>
+                            <img src="/img/answer.png" class="answer_pic">
+                            <a href="/q/${question.get('id')}"><span>添加回答</span></a>
                         </div>
                     </div>
 

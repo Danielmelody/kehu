@@ -40,6 +40,12 @@ a {
     text-decoration: none;
 }
 
+.top{
+    border: 0px solid;
+    height: 50px;
+    width: inherit;
+}
+
 .title {
     background-color: rgb(94, 206, 184);
     height: 50px;

@@ -14,7 +14,7 @@ import java.util.Vector;
  * Created by huyiming on 15/11/17.
  */
 public class Answer extends BaseModel{
-    public static Vector<Answer> queryByQuestion(int questionId){
+    public static Vector<Answer> queryByQuestion(String questionId){
         try {
 
             Connection connection = JDBCHelper.getConnection();

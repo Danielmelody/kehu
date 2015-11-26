@@ -21,7 +21,7 @@ public class Question extends BaseModel{
         try {
 
             Connection connection = JDBCHelper.getConnection();
-            String sql = "SELECT * FROM question ORDER BY updateTime LIMIT "+limit;
+            String sql = "SELECT * FROM question ORDER BY updateTime DESC LIMIT "+limit;
             Statement statement = connection.createStatement();
             ResultSet results = statement.executeQuery(sql);
 
@@ -33,7 +33,6 @@ public class Question extends BaseModel{
                 datas.put("userId", results.getString("userId"));
                 datas.put("title", results.getString("title"));
                 datas.put("contant", results.getString("contant"));
-
                 questions.addElement(new Question(datas, false));
             }
 
@@ -50,8 +49,6 @@ public class Question extends BaseModel{
         this.isNew = isNew;
 
     }
-
-
 
 
 

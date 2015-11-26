@@ -40,16 +40,16 @@
     <div class="content">
         <!--此处数据库得到的放内容-->
         <div class="the_head">
-            <p>我科的光电研究生专业怎么样？</p>
+            <p>${question.get("title")}</p>
         </div>
 
         <div class="middle">
             <div class="middle_top">
-                <p>我想考光电研究生，我想问华中科技大学的光电专业研究生怎么样？</p>
+                <p>${question.get("contant")}</p>
                 <span><data>2015-11-09</data> <img src="img/answer.png">添加评论</span>
             </div>
             <div class="middle_down">
-                <p>4个回答</p>
+                <p>${question.get("answersCount")}个回答</p>
             </div>
         </div>
         <!--以下为所跟的帖的内容-->

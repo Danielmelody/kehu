@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by huyiming on 15/11/17.
@@ -19,34 +21,54 @@ public abstract class BaseModel{
 
     protected String tableName;
 
-    protected HashMap<String ,String> datas;
+    protected Map<String ,String> datas;
 
-    public void save() throws SQLException {
+    public void save() {
         Iterator iter = datas.entrySet().iterator();
-        String columns = "";
-        String values = "";
-        if(!datas.isEmpty()) {
-            while (iter.hasNext()) {
+        String sql= "";
+        if(isNew) {
+            String columns = "";
+            String values = "";
+            if(!datas.isEmpty()) {
+
+                while (iter.hasNext()) {
+                    Map.Entry entry = (Map.Entry) iter.next();
+                    columns += entry.getKey();
+                    values += "'"+entry.getValue()+"'";
+                    if(iter.hasNext()){
+                        columns += ",";
+                        values += ",";
+                    }
+                }
+            }
+            sql = "INSERT INTO question (" + columns + ") VALUES (" + values + ")";
+        }
+        else {
+            sql = "UPDATE question SET ";
+            while(iter.hasNext()){
                 Map.Entry entry = (Map.Entry) iter.next();
-                columns += (String) entry.getKey();
-                values += (String) entry.getValue();
+                sql += entry.getKey();
+                sql += " = " + entry.getValue();
                 if(iter.hasNext()){
-                    columns += ",";
-                    values += ",";
+                    sql += ",";
                 }
             }
         }
-        String sql= "";
-        if(isNew) {
-            sql = "INSERT INTO question (" + columns + ") VALUES (" + values + ")";
+        try {
             Connection connection = JDBCHelper.getConnection();
             Statement statement = connection.createStatement();
             statement.execute(sql);
+        }catch (SQLException e){
+            iter = datas.entrySet().iterator();
+            Logger log = Logger.getLogger("lavasoft");
+            log.setLevel(Level.WARNING);
+            log.warning(sql);
+            while (iter.hasNext()) {
+                Map.Entry entry = (Map.Entry) iter.next();
+                log.warning("{" + (String) entry.getKey() + " : " + (String) entry.getValue() + "}");
+            }
+            e.printStackTrace();
         }
-        else {
-            sql = "UPDATE "
-        }
-
     }
 
     public String  get(String key){

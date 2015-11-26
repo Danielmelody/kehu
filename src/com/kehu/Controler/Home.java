@@ -31,8 +31,8 @@ public class Home extends VelocityViewServlet {
 
 
     @Override
-    protected void setContentType(HttpServletRequest request,
-                                  HttpServletResponse response) {
+      protected void setContentType(HttpServletRequest request,
+                                    HttpServletResponse response) {
         response.setContentType("text/html;charset=utf-8");
     }
 

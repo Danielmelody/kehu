@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>华科问答</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script type="text/javascript" src="js/change.js"></script>
@@ -84,7 +84,7 @@
                             <img src="/img/comment.png" class="comment_pic">
                             <a href="/q/${question.get('id')}"><span>3条评论</span></a>
                             <img src="/img/answer.png" class="answer_pic">
-                            <a href="/q/${question.get('id')}"><span>添加回答</span></a>
+                            <a href="/q/${question.get('id')}" ><span>添加回答</span></a>
                         </div>
                     </div>
 
@@ -108,10 +108,10 @@
         <div class="c_right">
             <p>今天你遇到了什么问题?</p>
             <div class="p_form">
-                <form action="" method="post">
-                    <input type="text" placeholder="写下你的问题">
+                <form action="/q/new" method="post" accept-charset="UTF-8">
+                    <input type="text" placeholder="写下你的问题" name="title" >
                     <label for="miaoshu">问题说明:</label>
-                    <textarea id="miaoshu" placeholder="问题的详细描述，选填"></textarea>
+                    <textarea id="miaoshu" placeholder="问题的详细描述，选填" name="contant"></textarea>
                     <label for="huati">选择话题:</label>
                     <input type="text" id="huati">
                     <br>

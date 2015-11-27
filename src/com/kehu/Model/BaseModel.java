@@ -46,7 +46,7 @@ public abstract class BaseModel{
                     }
                 }
             }
-            sql = "INSERT INTO question (" + columns + ") VALUES (" + values + ")";
+            sql = "INSERT INTO " + tableName + "(" + columns + ") VALUES (" + values + ")";
         }
         else {
             sql = "UPDATE question SET ";
@@ -62,6 +62,7 @@ public abstract class BaseModel{
         try {
             Connection connection = JDBCHelper.getConnection();
             Statement statement = connection.createStatement();
+            log.warning(sql);
             statement.execute(sql);
         }catch (SQLException e){
             iter = datas.entrySet().iterator();

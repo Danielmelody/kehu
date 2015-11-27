@@ -71,6 +71,7 @@ public class Question extends BaseModel {
     }
 
     public Question(HashMap<String, String> datas, boolean isNew) {
+        this.tableName = "question";
         init(datas, isNew);
     }
 

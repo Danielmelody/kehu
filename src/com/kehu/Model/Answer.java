@@ -10,6 +10,8 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by huyiming on 15/11/17.
@@ -19,7 +21,7 @@ public class Answer extends BaseModel{
         try {
 
             Connection connection = JDBCHelper.getConnection();
-            String sql = "SELECT * FROM answer  WHERE questionId = " + questionId + " LIMIT " + limit;
+            String sql = "SELECT * FROM answer WHERE questionId = " + questionId + " ORDER BY updateTime DESC  LIMIT " + limit;
             Statement statement = connection.createStatement();
             ResultSet results = statement.executeQuery(sql);
 
@@ -40,8 +42,8 @@ public class Answer extends BaseModel{
     }
 
     public Answer(HashMap<String, String> datas, boolean isNew){
-        this.datas = datas;
-        this.isNew = isNew;
+        this.tableName = "answer";
+        init(datas, isNew);
     }
 
     private static void transform(ResultSet results, Map<String, String> datas) {
@@ -51,6 +53,9 @@ public class Answer extends BaseModel{
             datas.put("contant", results.getString("contant"));
             datas.put("agree", Integer.toString(results.getInt("agree")));
             datas.put("userName", results.getString("userName"));
+            Logger log = Logger.getLogger("lavasoft");
+            log.setLevel(Level.WARNING);
+            log.warning("userName:" + results.getString("userName"));
             datas.put("updateTime", results.getString("updateTime"));
             datas.put("disagree", Integer.toString(results.getInt("disagree")));
 

@@ -58,6 +58,7 @@ public class User extends BaseModel {
     }
 
     public User(HashMap<String, String> datas, boolean isNew) {
+        this.tableName = "user";
         init(datas, isNew);
     }
 

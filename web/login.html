@@ -15,10 +15,10 @@
     <div class="login">
         <form action="#" method="post">
             <div class="the_mail">
-                <input type="email" placeholder="电子邮箱">
+                <input type="email" placeholder="电子邮箱" required="required" oninvalid="setCustomValidity('请填写邮箱')" oninput="setCustomValidity('')">
             </div>
             <div class="the_password">
-                <input type="password" placeholder="密码">
+                <input type="password" placeholder="密码" required="required" oninvalid="setCustomValidity('请填写密码')" oninput="setCustomValidity('')">
             </div>
             <div class="the_button">
                 <input type="submit" value="登录">

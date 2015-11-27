@@ -115,7 +115,7 @@
     margin-top: 6px;
     margin-bottom: 6px;
     overflow: hidden;
-    width: 826px;
+    width: inherit;
 }
 
 .a_title{
@@ -147,7 +147,7 @@
     margin-top: 6px;
     margin-bottom: 6px;
     overflow: hidden;
-    width: 826px;
+    width: inherit;
 }
 
 .q_p_div{

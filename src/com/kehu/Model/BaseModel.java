@@ -24,6 +24,11 @@ public abstract class BaseModel{
     protected Map<String ,String> datas;
 
     public void save() {
+
+        Logger log = Logger.getLogger("lavasoft");
+        log.setLevel(Level.WARNING);
+        log.warning("----------save---------");
+
         Iterator iter = datas.entrySet().iterator();
         String sql= "";
         if(isNew) {
@@ -57,13 +62,10 @@ public abstract class BaseModel{
         try {
             Connection connection = JDBCHelper.getConnection();
             Statement statement = connection.createStatement();
-            Logger log = Logger.getLogger("lavasoft");
-            log.setLevel(Level.WARNING);
-            log.warning(sql);
+            statement.execute(sql);
         }catch (SQLException e){
             iter = datas.entrySet().iterator();
-            Logger log = Logger.getLogger("lavasoft");
-            log.setLevel(Level.WARNING);
+
             log.warning(sql);
             while (iter.hasNext()) {
                 Map.Entry entry = (Map.Entry) iter.next();
@@ -71,6 +73,8 @@ public abstract class BaseModel{
             }
             e.printStackTrace();
         }
+
+        this.isNew = false;
 
         this.update();
 

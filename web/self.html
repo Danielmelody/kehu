@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>个人信息</title>
-    <link rel="stylesheet" type="text/css" href="css/self.css">
+    <link rel="stylesheet" type="text/css" href="/css/self.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
             <div class="m_r_div2">
                 <a href="self.html">
                     <img src="img/my_pic.jpg">
-                    <p>秀秀</p>
+                    <p>$user.get("name")</p>
                 </a>
             </div>
         </div>
@@ -48,13 +48,13 @@
             </div>
             <div class="self_inf_right">
                 <div class="s_i_r_div">
-                    <h2>壮壮</h2>
-                    <h4>软件工程专业本科在读</h4>
+                    <h2>$user.get("name")</h2>
+                    <h4>$user.get("name")</h4>
                 </div>
                 <div class="s_i_r_div">
-                    <p name="p_1">关注了<span>102</span>人/被<span>102</span>人关注</p>
-                    <p name="p_2">获得<span>50</span>赞同/<span>9</span>反对</p>
-                    <p name="p_3"><span>24</span>提问/<span>52</span>回答</p>
+                    <p name="p_1">关注了<span>$user.get("attentionTo")</span>人/被<span>$user.get("attentionFrom")</span>人关注</p>
+                    <p name="p_2">获得<span>$user.get("agree")</span>赞同/<span>$user.get("disagree")</span>反对</p>
+                    <p name="p_3"><span>$user.get("askNum")</span>提问/<span>$user.get("ansNum")</span>回答</p>
                 </div>
             </div>
         </div>

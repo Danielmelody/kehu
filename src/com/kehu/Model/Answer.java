@@ -15,11 +15,11 @@ import java.util.Vector;
  * Created by huyiming on 15/11/17.
  */
 public class Answer extends BaseModel{
-    public static Vector<Answer> queryByQuestion(String questionId){
+    public static Vector<Answer> queryByQuestion(String questionId, int limit){
         try {
 
             Connection connection = JDBCHelper.getConnection();
-            String sql = "SELECT * FROM answer  WHERE questionId = " + questionId;
+            String sql = "SELECT * FROM answer  WHERE questionId = " + questionId + " LIMIT " + limit;
             Statement statement = connection.createStatement();
             ResultSet results = statement.executeQuery(sql);
 

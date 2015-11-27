@@ -14,12 +14,12 @@ import java.util.Vector;
 /**
  * Created by huyiming on 15/11/17.
  */
-public class User extends BaseModel{
+public class User extends BaseModel {
 
-    public static Vector<User> query(String sql) {
+    public static Vector<User> query(String colunm, String value, int limit) {
 
         try {
-
+            String sql = "SELECT * FROM user WHERE " + colunm + " = '" + value + "'" + " LIMIT " + limit;
             Connection connection = JDBCHelper.getConnection();
             Statement statement = connection.createStatement();
             ResultSet results = statement.executeQuery(sql);
@@ -48,23 +48,32 @@ public class User extends BaseModel{
             datas.put("agree", results.getString("agree"));
             datas.put("disagree", results.getString("disagree"));
             datas.put("askNum", results.getString("askNum"));
-            datas.put("ansNum", Integer.toString(results.getInt("id")));
+            datas.put("ansNum", results.getString("ansNum"));
+            datas.put("attentionTo", results.getString("attentionTo"));
+            datas.put("attentionFrom", results.getString("attentionFrom"));
 
         } catch (SQLException e1) {
             e1.printStackTrace();
         }
     }
 
-    User(HashMap<String, String> datas, boolean isNew){
+    public User(HashMap<String, String> datas, boolean isNew) {
         init(datas, isNew);
     }
 
     @Override
-    protected void update() {
+    public void update() {
+        try {
+            String sql = "SELECT * FROM user WHERE id = " + get("id");
+            Connection connection = JDBCHelper.getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet results = statement.executeQuery(sql);
+            transform(results, datas);
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
-
-
 }
 
 

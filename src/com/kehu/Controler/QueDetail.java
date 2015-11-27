@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  */
 
 @WebServlet(name = "questionDetail", urlPatterns = "/q/*")
-public class QueDetail extends VelocityViewServlet{
+public class QueDetail extends VelocityViewServlet {
     @Override
     protected void setContentType(HttpServletRequest request,
                                   HttpServletResponse response) {
@@ -30,33 +30,47 @@ public class QueDetail extends VelocityViewServlet{
     }
 
     @Override
-    protected Template handleRequest(HttpServletRequest request,
-                                     HttpServletResponse response, Context ctx) {
-        try {
-            request.setCharacterEncoding("UTF-8");
-            response.setCharacterEncoding("UTF-8");
-            response.setContentType("text/html");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        Map<String, String[]> map = request.getParameterMap();
-        if(map != null){
-            HashMap<String, String> datas = new HashMap<>();
-            Iterator iterator = map.entrySet().iterator();
-            while (iterator.hasNext()){
-                Map.Entry entry = (Map.Entry)iterator.next();
-                datas.put((String)entry.getKey(), ((String[])entry.getValue())[0]);
+    protected Template handleRequest(HttpServletRequest request, HttpServletResponse response, Context ctx) {
+
+
+        String qID = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/"));
+        qID = qID.substring(1);
+        Logger log = Logger.getLogger("lavasoft");
+        log.setLevel(Level.WARNING);
+        log.warning("qID:" + qID);
+        if(qID.equals("new")) {
+
+            try {
+                request.setCharacterEncoding("UTF-8");
+                response.setCharacterEncoding("UTF-8");
+                response.setContentType("text/html");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
             }
-            Question question = new Question(datas, true);
-            question.save();
+            HashMap<String, String> datas = new HashMap<>();
 
-            Vector<Answer> answers = Answer.queryByQuestion(question.get("id"));
+            if (request.getParameter("title") != null && null != Current.getCurrentUser(request, response, ctx)) {
+                datas.put("title", request.getParameter("title"));
 
-            ctx.put("question", question);
-            ctx.put("answers", answers);
+                if (request.getParameter("contant") != null) {
+                    datas.put("contant", request.getParameter("contant"));
+                }
 
+
+                datas.put("userId", Current.getCurrentUser(request, response, ctx).get("id"));
+                Question question = new Question(datas, true);
+                ctx.put("question", question);
+                question.save();
+            }
+        }else {
+
+            Question question = Question.query(qID).get(0);
+
+            ctx.put("question",question);
         }
 
+        //Vector<Answer> answers = Answer.queryByQuestion(question.get("id"));
+        //ctx.put("answers", answers);
         return getTemplate("detail.html");
     }
 }

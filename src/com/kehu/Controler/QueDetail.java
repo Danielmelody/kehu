@@ -40,7 +40,7 @@ public class QueDetail extends VelocityViewServlet{
             e.printStackTrace();
         }
         Map<String, String[]> map = request.getParameterMap();
-        if(!(map.get("title").length > 0)){
+        if(map != null){
             HashMap<String, String> datas = new HashMap<>();
             Iterator iterator = map.entrySet().iterator();
             while (iterator.hasNext()){
@@ -54,8 +54,6 @@ public class QueDetail extends VelocityViewServlet{
 
             ctx.put("question", question);
             ctx.put("answers", answers);
-
-
 
         }
 

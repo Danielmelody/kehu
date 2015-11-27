@@ -9,30 +9,28 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Vector;
 
 /**
  * Created by huyiming on 15/11/17.
  */
-public class Question extends BaseModel{
+public class Question extends BaseModel {
 
-    public static Vector<Question> query(int limit){
+    public static Vector<Question> query(int limit) {
 
         try {
 
             Connection connection = JDBCHelper.getConnection();
-            String sql = "SELECT * FROM question ORDER BY updateTime DESC LIMIT "+limit;
+            String sql = "SELECT * FROM question ORDER BY updateTime DESC LIMIT " + limit;
             Statement statement = connection.createStatement();
             ResultSet results = statement.executeQuery(sql);
 
             Vector<Question> questions = new Vector<>();
 
-            while(results.next()) {
+            while (results.next()) {
                 HashMap<String, String> datas = new HashMap<>();
-                datas.put("id", Integer.toString(results.getInt("id")));
-                datas.put("userId", results.getString("userId"));
-                datas.put("title", results.getString("title"));
-                datas.put("contant", results.getString("contant"));
+                transform(results, datas);
                 questions.addElement(new Question(datas, false));
             }
 
@@ -44,13 +42,37 @@ public class Question extends BaseModel{
         return null;
     }
 
-    public Question(HashMap<String, String> datas, boolean isNew){
-        this.datas = datas;
-        this.isNew = isNew;
-
+    public Question(HashMap<String, String> datas, boolean isNew) {
+        init(datas, isNew);
     }
 
 
+    private static void transform(ResultSet results, Map<String, String> datas) {
+        try {
+            datas.put("id", Integer.toString(results.getInt("id")));
+            datas.put("userId", results.getString("userId"));
+            datas.put("title", results.getString("title"));
+            datas.put("contant", results.getString("contant"));
 
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+    }
 
+    @Override
+    protected void update() {
+        Connection connection = null;
+        try {
+            connection = JDBCHelper.getConnection();
+            String sql = "SELECT * FROM question WHERE id = LAST_INSERT_ID()";
+            Statement statement = connection.createStatement();
+            ResultSet results = statement.executeQuery(sql);
+            results.first();
+            transform(results, this.datas);
+
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+
+    }
 }

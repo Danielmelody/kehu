@@ -57,7 +57,9 @@ public abstract class BaseModel{
         try {
             Connection connection = JDBCHelper.getConnection();
             Statement statement = connection.createStatement();
-            statement.execute(sql);
+            Logger log = Logger.getLogger("lavasoft");
+            log.setLevel(Level.WARNING);
+            log.warning(sql);
         }catch (SQLException e){
             iter = datas.entrySet().iterator();
             Logger log = Logger.getLogger("lavasoft");
@@ -69,9 +71,21 @@ public abstract class BaseModel{
             }
             e.printStackTrace();
         }
+
+        this.update();
+
     }
 
-    public String  get(String key){
+
+    abstract void update();
+
+    void init(HashMap<String, String> datas, boolean isNew) {
+        this.datas = datas;
+        this.isNew = isNew;
+
+    }
+
+    public String get(String key){
         return datas.get(key);
     }
 

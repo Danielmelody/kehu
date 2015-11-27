@@ -40,7 +40,7 @@ public class Home extends VelocityViewServlet {
     protected Template handleRequest(HttpServletRequest request,
                                      HttpServletResponse response, Context ctx) {
 
-        Vector questions = Question.query(20);
+        
 
         ctx.put("questionList", Question.query(20));
         return getTemplate("index.html");

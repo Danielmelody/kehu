@@ -82,7 +82,7 @@
 
         <div class="the_answer">
             <form>
-                <textarea class="textarea_part"></textarea>
+                <textarea class="textarea_part" oninvalid="setCustomValidity('请填写内容')" oninput="setCustomValidity('')" required="required"></textarea>
                 <input class="my_submit" type="submit" value="发布回答">
             </form>
         </div>

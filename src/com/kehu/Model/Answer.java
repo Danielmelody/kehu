@@ -50,6 +50,8 @@ public class Answer extends BaseModel{
             datas.put("questionId", results.getString("questionId"));
             datas.put("contant", results.getString("contant"));
             datas.put("agree", Integer.toString(results.getInt("agree")));
+            datas.put("userName", results.getString("userName"));
+            datas.put("updateTime", results.getString("updateTime"));
             datas.put("disagree", Integer.toString(results.getInt("disagree")));
 
         } catch (SQLException e1) {

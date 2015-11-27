@@ -22,6 +22,7 @@ public class UserInfo extends VelocityViewServlet {
         Current.getCurrentUser(request, response, ctx);
         Logger log = Logger.getLogger("lavasoft");
         log.setLevel(Level.WARNING);
+        ctx.put("user", Current.getCurrentUser(request, response, ctx));
         Enumeration<String> stringEnumeration = request.getSession().getAttributeNames();
         while(stringEnumeration.hasMoreElements()){
             log.warning("=====" + stringEnumeration.nextElement());

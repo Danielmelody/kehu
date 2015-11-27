@@ -7,35 +7,39 @@
 </head>
 <body>
 
-    <div class="title">
-        <div class="set_word">
-            <img src="img/kehu.png">
+<div class="title">
+    <div class="set_word">
+        <img src="/image/kehu.png">
+    </div>
+    <div class="title_search">
+        <form>
+            <input type="search" id="ts_search">
+            <input type="submit" class="submit" value="">
+        </form>
+    </div>
+    <div class="change_content">
+        <a id="cc_p1" class="ccp_focus">发现</a>
+        <a id="cc_p2" class="ccp_now">话题</a>
+    </div>
+    #if(!$isLogin)
+    <div class="title_right" >
+        <a href="/register" target="_top">注册</a>
+        <a href="/login" target="_top">登录</a>
+    </div>
+    #else
+    <div class="master_rignt">
+        <div class="m_r_div1">
+            <img src="/image/message.png">
         </div>
-
-        <div class="title_search">
-            <form>
-                <input type="search" id="ts_search">
-                <input type="submit" class="submit" value="">
-            </form>
-        </div>
-        
-        <div class="change_content">
-            <a href="index.html" target="_top" class="ccp">发现</a>
-            <a href="self.html" target="_top" class="ccp">话题</a>
-        </div>
-
-        <div class="master_rignt">
-            <div class="m_r_div1">
-                <img src="img/message.png">
-            </div>
-            <div class="m_r_div2">
-                <a href="self.html">
-                    <img src="img/my_pic.jpg">
-                    <p>$user.get("name")</p>
-                </a>
-            </div>
+        <div class="m_r_div2">
+            <a href="/user/">
+                <img src="/image/my_pic.jpg">
+                <p>$user.get("name")</p>
+            </a>
         </div>
     </div>
+    #end
+</div>
     
     <!--<iframe src="title.html" class="top"></iframe>-->
 
@@ -43,8 +47,8 @@
 
         <div class="self_inf">
             <div class="self_inf_left">
-                <img src="img/my_pic.jpg" alt="个人图片" name="pic_1"><br>
-                <a href="information.html">修改资料<img src="img/rebuilt.png"></a>
+                <img src="/image/my_pic.jpg" alt="个人图片" name="pic_1"><br>
+                <a href="information.html">修改资料<img src="/image/rebuilt.png"></a>
             </div>
             <div class="self_inf_right">
                 <div class="s_i_r_div">
@@ -89,7 +93,7 @@
 
                     <div class="f_r_com_div">
                         <data>2015/11/16</data>
-                        <img src="img/comment.png" class="comment_pic">
+                        <img src="/image/comment.png" class="comment_pic">
                         <a href="detail.html"><span>3条评论</span></a>
                     </div>
                 </div>

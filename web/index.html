@@ -10,7 +10,7 @@
 <body>
     <div class="title">
         <div class="set_word">
-            <img src="img/kehu.png">
+            <img src="/image/kehu.png">
         </div>
         <div class="title_search">
             <form>
@@ -24,17 +24,17 @@
         </div>
         #if(!$isLogin)
         <div class="title_right" >
-            <a href="rigist.html" target="_top">注册</a>
-            <a href="login.html" target="_top">登录</a>
+            <a href="/register" target="_top">注册</a>
+            <a href="/login" target="_top">登录</a>
         </div>
         #else
         <div class="master_rignt">
             <div class="m_r_div1">
-                <img src="img/message.png">
+                <img src="/image/message.png">
             </div>
             <div class="m_r_div2">
                 <a href="/user/">
-                    <img src="img/my_pic.jpg">
+                    <img src="/image/my_pic.jpg">
                     <p>$user.get("name")</p>
                 </a>
             </div>
@@ -66,12 +66,12 @@
                         #if($answersMap.get($question).length > 0)
                         <div class="float_left">
                             <div class="f_t_top">
-                                <img src="/img/up.png">
+                                <img src="/image/up.png">
                                 <!--这里的img可以在前面加a做链接-->
                                 <p>30</p>
                             </div>
                             <div class="f_t_down">
-                                <img src="/img/down.png">
+                                <img src="/image/down.png">
                             </div>
                         </div>
 
@@ -85,9 +85,9 @@
                         <div class="clear"></div>
 
                         <div class="f_r_com_div">
-                            <img src="/img/comment.png" class="comment_pic">
+                            <img src="/image/comment.png" class="comment_pic">
                             <a href="/q/${question.get('id')}"><span>$question.get("answerCount")个回答</span></a>
-                            <img src="/img/answer.png" class="answer_pic">
+                            <img src="/image/answer.png" class="answer_pic">
                             <a href="/q/${question.get('id')}" ><span>添加回答</span></a>
                         </div>
                     </div>

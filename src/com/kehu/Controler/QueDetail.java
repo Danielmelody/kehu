@@ -10,10 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,11 +30,16 @@ public class QueDetail extends VelocityViewServlet {
     protected Template handleRequest(HttpServletRequest request, HttpServletResponse response, Context ctx) {
 
 
+
         String qID = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/"));
         qID = qID.substring(1);
         Logger log = Logger.getLogger("lavasoft");
         log.setLevel(Level.WARNING);
         log.warning("qID:" + qID);
+        Question question = null;
+
+        ctx.put("user", Current.getCurrentUser(request, response, ctx));
+
         if(qID.equals("new")) {
 
             try {
@@ -58,19 +60,29 @@ public class QueDetail extends VelocityViewServlet {
 
 
                 datas.put("userId", Current.getCurrentUser(request, response, ctx).get("id"));
-                Question question = new Question(datas, true);
+                question = new Question(datas, true);
                 ctx.put("question", question);
                 question.save();
             }
         }else {
 
-            Question question = Question.query(qID).get(0);
+            question = Question.query(qID).get(0);
 
             ctx.put("question",question);
         }
 
-        //Vector<Answer> answers = Answer.queryByQuestion(question.get("id"));
-        //ctx.put("answers", answers);
+        if(request.getParameter("answer") != null){
+            HashMap<String, String> datas = new HashMap<>();
+            datas.put("questionId", qID);
+            datas.put("userId", Current.getCurrentUser(request, response, ctx).get("id"));
+            datas.put("userName", Current.getCurrentUser(request, response, ctx).get("name"));
+            datas.put("contant", request.getParameter("answer"));
+            new Answer(datas, true).save();
+        }
+
+        Vector<Answer> answers = Answer.queryByQuestion(qID, 100);
+        ctx.put("answers", answers);
+
         return getTemplate("detail.html");
     }
 }

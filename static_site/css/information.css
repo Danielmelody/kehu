@@ -1,0 +1,170 @@
+@charset "utf-8";
+@import url("title.css");
+
+input,textarea{
+    outline: none;
+}
+
+.maintain{
+    background-color: white;
+    border: 1px solid #ccc;
+    left: 50%;
+    margin-bottom: 20px;
+    margin-left: -415px;
+    position: relative;
+    top: 10px;
+    width: 830px;
+}
+
+.the_top{
+    background-color: rgb(245,254,252);
+    height: 70px;
+    line-height: 70px;
+    width: inherit;
+}
+
+.the_top span[name="span_1"]{
+    color: #5fcdb7;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.the_top span[name="span_2"]{
+    font-size: 12px;
+    font-style: italic;
+    left: 9px;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.the_top span[name="span_3"]{
+    font-size: 15px;
+    font-style: italic;
+}
+
+.the_top_a{
+    color: #5fcdb7;
+    float: right;
+    margin-right: 15px;
+    text-decoration: underline;
+}
+
+.input_part{
+    border-bottom: 1px solid #ddd;
+    height: 60px;
+    line-height: 60px;
+    width: inherit;
+}
+
+.input_part label[name="text"]{
+    margin-left: 75px;
+}
+
+.input_part label[name="radio"]{
+    left: -70px;
+    position: relative;
+}
+
+.input_part input[type="text"]{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 45px;
+    height: 32px;
+    text-indent: 3px;
+    width: 280px;
+}
+
+.input_part input[type="radio"]{
+    left: -70px;
+    margin-left: 130px;
+    position: relative;
+}
+
+.chang_part{
+    border-bottom: 1px solid #ddd;
+    height: 140px;
+    width: inherit;
+}
+
+.chang_part p{
+    height: 120px;
+    position: relative;
+    top: 20px;
+    width: inherit;
+}
+
+.chang_part p label[name="title"]{
+    float: left;
+    height: inherit;
+    margin-left: 75px;
+}
+
+.chang_part p img{
+    float: left;
+    height: 100px;
+    left: 55px;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+}
+
+.chang_part p input{
+    background-color: #5fcdb7;
+    border: 0px solid;
+    border-radius: 2px;
+    color: white;
+    float: left;
+    left: 75px;
+    height: 28px;
+    position: relative;
+    width: 64px;
+}
+
+.chang_part p input:hover{
+    cursor: pointer;
+}
+
+.chang_part p textarea{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 100px;
+    left: 30px;
+    padding-top: 2px;
+    position: relative;
+    resize:none;
+    text-indent: 3px;
+    width: 300px;
+}
+
+.the_footer{
+    height: 100px;
+    line-height: 100px;
+    width: inherit;
+}
+
+.the_footer input[type="reset"]{
+    background-color: white;
+    border: 0px solid;
+    color: rgb(145,218,203);
+    font-size: 14px;
+    left: 75px;
+    position: relative;
+}
+
+.the_footer input[type="submit"]{
+    background-color: #5fcdb7;
+    border: 0px solid;
+    border-radius: 4px;
+    color: white;
+    float: right;
+    font-size: 16px;
+    height: 38px;
+    position: relative;
+    right: 75px;
+    top: 30px;
+    width: 78px;
+}
+
+.the_footer input:hover{
+    cursor: pointer;
+}

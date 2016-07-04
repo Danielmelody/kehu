@@ -18,8 +18,8 @@
         </form>
     </div>
     <div class="change_content">
-        <a id="cc_p1" class="ccp_focus">发现</a>
-        <a id="cc_p2" class="ccp_now">话题</a>
+        <a id="cc_p1" class="ccp_focus" href="/">发现</a>
+        <a id="cc_p2" class="ccp_now" href="/">话题</a>
     </div>
     #if(!$isLogin)
     <div class="title_right" >
@@ -27,17 +27,22 @@
         <a href="/login" target="_top">登录</a>
     </div>
     #else
+    <div class="logout">
+        <a href="/logout">退出登录</a>
+    </div>
+
     <div class="master_rignt">
         <div class="m_r_div1">
             <img src="/image/message.png">
         </div>
         <div class="m_r_div2">
-            <a href="/user/">
+            <a href="/user/$user.get('id')">
                 <img src="/image/my_pic.jpg">
                 <p>$user.get("name")</p>
             </a>
         </div>
     </div>
+
     #end
 </div>
     
@@ -65,16 +70,17 @@
 
         <div class="activity">
             <div class="a_title">
-                <p>最近动态</p>
+                <p>最近回答</p>
             </div>
 
             <!--获取数据的样式-->
-            <p class="now_get">赞同了回答</p>
+            <p class="now_get">回答了该问题</p>
 
             <!--以下为所发的帖的内容--><!--所有贴用这个class的样式-->
+            #foreach($answer in $answers)
                 <div class="d_s_div">
-                    <a href="detail.html">
-                        <p class="d_s_d_p">华中科技大学研究生考试时间是什么时候？初试跟复试的时间</p>
+                    <a href="/q/$answer.get('questionId')">
+                        <p class="d_s_d_p">$answer.get("questionTitle")</p>
                     </a>
                     <div class="d_s_div_middle">
                         <div class="float_left">
@@ -83,10 +89,8 @@
                             </div>
                         </div>
                         <div class="float_right">
-                            <h4>秀秀</h4>
-                            <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
-                            <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
-                            <p>按正常以往华科发布的华中科技大学研究生考试时间来看，初始一般在12月27-28号这两天，服饰的话正常实在3-4月份，复试分数线出来以后，就差不多要进行复试面试了。由于是自主划线学校，所以会比国家线晚出。</p>
+                            <h4></h4>
+                            <p>$answer.get("contant")</p>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -94,10 +98,11 @@
                     <div class="f_r_com_div">
                         <data>2015/11/16</data>
                         <img src="/image/comment.png" class="comment_pic">
-                        <a href="detail.html"><span>3条评论</span></a>
+                        <a href="/q/$answer.get('questionId')"><span>0条评论</span></a>
                     </div>
                 </div>
-              
+            #end
+
             <!--以上为所发的帖的内容-->
             <div class="clear_bottom_line"></div>
         </div>
@@ -107,19 +112,17 @@
                 <p>提问</p>
             </div>
             <div class="q_p_div">
-                <div class="q_p_left">
-                    <p>30</p>
-                    <p name="the_answer">回答</p>
+                #foreach($question in ${questionList})
+                <div class="d_s_div">
+                    <p class="d_s_d_p">$question.get("title")</p>
+                    <p>$question.get("updateTime")</p>
+                    <span>$question.get("answerCount")个回答</span>
                 </div>
-                <div class="q_p_right">
-                    <h4>有哪些美食是值得推荐的？</h4>
-                    <data>2015/11/17</data>
-                    <span>229次浏览</span>
-                </div>
+                #end
             </div>
         </div>
 
-        <div class="question_part">
+        <!--<div class="question_part">
             <div class="a_title">
                 <p>回答</p>
             </div>
@@ -134,7 +137,7 @@
                     <span>229次浏览</span>
                 </div>
             </div>
-        </div>
+        </div>-->
 
     </div>
 </body>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人信息</title>
+    <link rel="stylesheet" type="text/css" href="css/self.css">
+    <script type="text/javascript" src="js/title.js"></script>
+</head>
+<body>
+
+    <div id="title" class="title" width="100%"></div>
+
+    <div class="main_content">
+
+        <div class="self_inf">
+            <div class="self_inf_left">
+                <img src="image/my_pic.jpg" alt="个人图片" name="pic_1"><br>
+                <a href="information.html">修改资料<img src="image/rebuilt.png"></a>
+            </div>
+            <div class="self_inf_right">
+                <div class="s_i_r_div">
+                    <!--<h2>$user.get("name")</h2>
+                    <h4>$user.get("name")</h4>-->
+                    <h2>Huster</h2>
+                    <h4>一个普通的华科学生</h4>
+                </div>
+                <div class="s_i_r_div">
+                    <p name="p_1">关注了<span>20</span>人/被<span>20</span>人关注</p>
+                    <p name="p_2">获得<span>32</span>赞同/<span>3</span>反对</p>
+                    <p name="p_3"><span>1</span>提问/<span>1</span>回答</p>
+                    <!--<p name="p_1">关注了<span>$user.get("attentionTo")</span>人/被<span>$user.get("attentionFrom")</span>人关注</p>
+                    <p name="p_2">获得<span>$user.get("agree")</span>赞同/<span>$user.get("disagree")</span>反对</p>
+                    <p name="p_3"><span>$user.get("askNum")</span>提问/<span>$user.get("ansNum")</span>回答</p>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="activity">
+            <div class="a_title">
+                <p>最近回答</p>
+            </div>
+
+            <!--获取数据的样式-->
+            <p class="now_get">回答了该问题</p>
+
+            <!--以下为所发的帖的内容--><!--所有贴用这个class的样式-->
+            <!--#foreach($answer in $answers)-->
+                <div class="d_s_div">
+                    <a href="detail.html">
+                        <!--<p class="d_s_d_p">$answer.get("questionTitle")</p>-->
+                        <p class="d_s_d_p">早上起不来晚上睡不着，好痛苦</p>
+                    </a>
+                    <div class="d_s_div_middle">
+                        <div class="float_left">
+                            <div class="f_t_top">
+                                <p>30</p>
+                            </div>
+                        </div>
+                        <div class="float_right">
+                            <h4></h4>
+                            <!--<p>$answer.get("contant")</p>-->
+                            <p>建议吃药</p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="f_r_com_div">
+                        <data>2015/11/16</data>
+                        <img src="image/comment.png" class="comment_pic">
+                        <a href="/q/$answer.get('questionId')"><span>0条评论</span></a>
+                    </div>
+                </div>
+            <!--#end-->
+
+            <!--以上为所发的帖的内容-->
+            <div class="clear_bottom_line"></div>
+        </div>
+
+        <div class="question_part">
+            <div class="a_title">
+                <p>提问</p>
+            </div>
+            <div class="q_p_div">
+                <!--#foreach($question in ${questionList})-->
+                <div class="d_s_div">
+                    <!--<p class="d_s_d_p">$question.get("title")</p>
+                    <p>$question.get("updateTime")</p>
+                    <span>$question.get("answerCount")个回答</span>-->
+                    <a href="detail.html"> <p class="d_s_d_p">东九被淹了怎么办</p> </a>
+                    <div class="f_r_com_div">
+                        <data>2015/11/16</data>
+                        <img src="image/comment.png" class="comment_pic">
+                        <a href="detail.html"><span>1个回答</span></a>
+                    </div>
+                </div>
+                <!--#end-->
+            </div>
+        </div>
+
+        <!--<div class="question_part">
+            <div class="a_title">
+                <p>回答</p>
+            </div>
+            <div class="q_p_div">
+                <div class="q_p_left">
+                    <p>30</p>
+                    <p name="the_answer">回答</p>
+                </div>
+                <div class="q_p_right">
+                    <h4>华中科技大学研究生考试时间是什么时候？初试跟复试的时间</h4>
+                    <data>2015/11/17</data>
+                    <span>229次浏览</span>
+                </div>
+            </div>
+        </div>-->
+
+    </div>
+</body>
+</html>

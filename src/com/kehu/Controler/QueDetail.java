@@ -38,7 +38,7 @@ public class QueDetail extends VelocityViewServlet {
         log.warning("qID:" + qID);
         Question question = null;
 
-        ctx.put("user", Current.getCurrentUser(request, response, ctx));
+        ctx.put("user", UserContext.getCurrentUser(request, response, ctx));
 
         if(qID.equals("new")) {
 
@@ -51,7 +51,7 @@ public class QueDetail extends VelocityViewServlet {
             }
             HashMap<String, String> datas = new HashMap<>();
 
-            if (request.getParameter("title") != null && null != Current.getCurrentUser(request, response, ctx)) {
+            if (request.getParameter("title") != null && null != UserContext.getCurrentUser(request, response, ctx)) {
                 datas.put("title", request.getParameter("title"));
 
                 if (request.getParameter("contant") != null) {
@@ -59,14 +59,14 @@ public class QueDetail extends VelocityViewServlet {
                 }
 
 
-                datas.put("userId", Current.getCurrentUser(request, response, ctx).get("id"));
+                datas.put("userId", UserContext.getCurrentUser(request, response, ctx).get("id"));
                 question = new Question(datas, true);
                 ctx.put("question", question);
                 question.save();
             }
         }else {
 
-            question = Question.query(qID).get(0);
+            question = Question.query("id", qID, 1).get(0);
 
             ctx.put("question",question);
         }
@@ -74,13 +74,14 @@ public class QueDetail extends VelocityViewServlet {
         if(request.getParameter("answer") != null){
             HashMap<String, String> datas = new HashMap<>();
             datas.put("questionId", qID);
-            datas.put("userId", Current.getCurrentUser(request, response, ctx).get("id"));
-            datas.put("userName", Current.getCurrentUser(request, response, ctx).get("name"));
+            datas.put("userId", UserContext.getCurrentUser(request, response, ctx).get("id"));
+            datas.put("userName", UserContext.getCurrentUser(request, response, ctx).get("name"));
             datas.put("contant", request.getParameter("answer"));
+            datas.put("questionTitle", question.get("title"));
             new Answer(datas, true).save();
         }
 
-        Vector<Answer> answers = Answer.queryByQuestion(qID, 100);
+        Vector<Answer> answers = Answer.query("questionId", qID, 100);
         ctx.put("answers", answers);
 
         return getTemplate("detail.html");

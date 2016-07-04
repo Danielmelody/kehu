@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>话题</title>
+    <link rel="stylesheet" type="text/css" href="css/topic.css">
+
+</head>
+<body>
+    <div id="title" class="title" width="100%"></div>
+
+    <div class="content" id="topicContent">
+        <div class="c_top">
+
+            <div class="ct_top">
+                <div class="ctl_div">
+                    <p>话题</p>
+                </div>
+                <div class="ctr_div">
+                    <ul>
+                        <li id="topicPage1" class="li_change">已关注话题</li>
+                        <li id="topicPage2" class="li_now">所有话题</li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="ct_down">
+                <div class="div_show" id="top_div1">
+
+                    <div class="ct_middle">
+                        <ul class="topicName">
+                            <li class="ct_active">编程</li>
+                            <li>学习</li>
+                            <li>书籍</li>
+                            <li>游戏</li>
+                            <li>新闻</li>
+                            <li>大学生活</li>
+                            <li>新鲜事</li>
+                            <li>英雄联盟</li>
+                            <li>数学建模</li>
+                            <li>数据结构</li>
+                            <li>计算机组成原理</li>
+                            <li>守望先锋</li>
+                            <li>考研</li>
+                            <li>求职</li>
+                            <li>社团</li>
+                            <li>课表</li>
+                            <li>动漫</li>
+                        </ul>
+                    </div>
+
+                    <div class="tpc_description">
+                        <div class="tpc_img">
+                            <img src="image/coding.jpg">
+                            <input type="button" class="cancel_att" id="att_btn" value="—取消关注">
+                        </div>
+                        <div class="tpc_detail">
+                            <h1>编程</h1>
+                            <h2>人们为了让计算机解决各种棘手的问题，使用编程语言编写程序代码并通过计算机运算得到最终结果的过程。</h2>
+                            <div class="tpc_data">
+                                <p name="topic_1">该话题被<span>1200</span>人关注</p>
+                                <p name="topic_2">有<span>32</span>个提问</p>
+                                <p name="topic_3"><span>550</span>个回答</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--#foreach ($question in ${questionList})-->
+                    <div class="d_s_div"><!--所有主贴用这个class的样式-->
+                        <!--<p class="d_s_d_p">${question.get("title")}</p>-->
+                        <a href="detail.html"> <p class="d_s_d_p">不会写代码怎么办</p> </a>
+                        <a class="fromTopic" href=" ">来自话题：编程</a>
+                        <!--#if($answersMap.get($question).size() > 0)-->
+                        <div class="float_left">
+                            <div class="f_t_top">
+                                <img src="image/up.png">
+                                <!--这里的img可以在前面加a做链接-->
+                                <p>30</p>
+                            </div>
+                            <div class="f_t_down">
+                                <img src="image/down.png">
+                            </div>
+                        </div>
+
+                        <div class="float_right">
+                            <a href="self.html">
+                                <!--<h4>$answersMap.get($question).get(0).get("userName")</h4>
+                                <p>$answersMap.get($question).get(0).get("contant")</p>-->
+                                <h4>Huster</h4>
+                            </a>
+                            <a href="detail.html">
+                                <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                            </a>
+                        </div>
+
+                        <!--#end-->
+
+                        <div class="clear"></div>
+
+                        <div class="f_r_com_div">
+                            <img src="image/comment.png" class="comment_pic">
+                            <!--<a href="detail.html"><span>$question.get("answerCount")个回答</span></a>-->
+                            <a href="detail.html"><span>1个回答</span></a>
+                            <img src="image/answer.png" class="answer_pic">
+                            <a href="detail.html"><span>添加回答</span></a>
+                        </div>
+                    </div>
+
+                    <!--#end-->
+
+                </div>
+
+                <div class="div_hidden" id="top_div2">
+
+                    <div class="ct_middle">
+                        <ul class="topicName">
+                            <li >健康</li>
+                            <li>情感</li>
+                            <li>文化</li>
+                            <li>计算机科学</li>
+                            <li>英语</li>
+                            <li>日语</li>
+                            <li>哲学</li>
+                            <li>互联网</li>
+                            <li>社团</li>
+                            <li>科技</li>
+                            <li>专业实训</li>
+                            <li>金工实习</li>
+                            <li>守望先锋</li>
+                            <li>求职</li>
+                            <li>艺术设计</li>
+                            <li>课表</li>
+                            <li>程序猿</li>
+                        </ul>
+                    </div>
+
+                    <div class="tpc_description">
+                        <div class="tpc_img">
+                            <img src="image/health.jpg">
+                            <input type="button" class="cancel_att" id="att_btn2" value="关注话题+">
+                        </div>
+                        <div class="tpc_detail">
+                            <h1>健康</h1>
+                            <h2>健康是指一个人在身体、精神和社会等方面都处于良好的状态。健康包括两个方面的内容：一是主要脏器无疾病，身体形态发育良好；二是对疾病的抵抗能力较强，能够适应环境变化，各种生理刺激以及致病因素对身体的作用。</h2>
+                            <div class="tpc_data">
+                                <p name="topic_1">该话题被<span>1689</span>人关注</p>
+                                <p name="topic_2">有<span>92</span>个提问</p>
+                                <p name="topic_3"><span>666</span>个回答</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="d_s_div"><!--所有主贴用这个class的样式-->
+                        <!--<p class="d_s_d_p">${question.get("title")}</p>-->
+                        <p class="d_s_d_p">早上起不来晚上睡不着，好痛苦</p>
+                        <!--#if($answersMap.get($question).size() > 0)-->
+                        <div class="float_left">
+                            <div class="f_t_top">
+                                <img src="image/up.png">
+                                <!--这里的img可以在前面加a做链接-->
+                                <p>33</p>
+                            </div>
+                            <div class="f_t_down">
+                                <img src="image/down.png">
+                            </div>
+                        </div>
+
+                        <div class="float_right">
+                            <a href="detail.html">
+                                <!--<h4>$answersMap.get($question).get(0).get("userName")</h4>
+                                <p>$answersMap.get($question).get(0).get("contant")</p>-->
+                                <h4>Thulium</h4>
+                                <p>Rt</p>
+                            </a>
+                        </div>
+
+                        <!--#end-->
+
+                        <div class="clear"></div>
+
+                        <div class="f_r_com_div">
+                            <img src="image/comment.png" class="comment_pic">
+                            <!--<a href="detail.html"><span>$question.get("answerCount")个回答</span></a>-->
+                            <a href="detail.html"><span>3个回答</span></a>
+                            <img src="image/answer.png" class="answer_pic">
+                            <a href="detail.html"><span>添加回答</span></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="c_right">
+            <div class="otherTopic">
+                <p>其他人关注的话题</p>
+                <ul>
+                    <li>软件工程</li>
+                    <li>计算机</li>
+                    <li>设计</li>
+                    <li>面向对象</li>
+                    <li>广告</li>
+                    <li>校园投诉</li>
+                    <li>铲屎官</li>
+                    <li>胡一鸣</li>
+                    <li>唐旻</li>
+                    <li>毛概</li>
+                    <li>专业实训</li>
+                    <li>动画</li>
+                    <li>电影</li>
+                </ul>
+            </div>
+            <div class="createTopic">
+                <p>创建话题</p>
+                <div class="t_form">
+                    <form action="" method="post" accept-charset="UTF-8">
+                        <input type="text" placeholder="话题名称" name="title">
+                        <label for="description">话题说明:</label>
+                        <textarea id="description" placeholder="话题说明" name="topicDescription"></textarea>
+                        <br>
+                        <input type="submit" value="创建话题">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/title.js"></script>
+    <script type="text/javascript" src="js/topic.js"></script>
+</body>
+</html>

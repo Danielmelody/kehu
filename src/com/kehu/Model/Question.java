@@ -19,12 +19,14 @@ import java.util.logging.Logger;
  */
 public class Question extends BaseModel {
 
-    public static Vector<Question> query(String id) {
+
+    public static Vector<Question> query(String column, String value, int limit) {
 
         try {
 
+
             Connection connection = JDBCHelper.getConnection();
-            String sql = "SELECT * FROM question WHERE id = " + id;
+            String sql = "SELECT * FROM question WHERE " + column + " = " + value + " LIMIT " + limit;
             Statement statement = connection.createStatement();
             Vector<Question> questions = new Vector<>();
             ResultSet results = statement.executeQuery(sql);
@@ -83,6 +85,7 @@ public class Question extends BaseModel {
             datas.put("title", results.getString("title"));
             datas.put("contant", results.getString("contant"));
             datas.put("answerCount", results.getString("answerCount"));
+            datas.put("updateTime", results.getString("updateTime"));
         } catch (SQLException e1) {
             e1.printStackTrace();
         }

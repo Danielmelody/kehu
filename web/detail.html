@@ -20,8 +20,8 @@
         </form>
     </div>
     <div class="change_content">
-        <a id="cc_p1" class="ccp_focus">发现</a>
-        <a id="cc_p2" class="ccp_now">话题</a>
+        <a id="cc_p1" class="ccp_focus" href="/">发现</a>
+        <a id="cc_p2" class="ccp_now" href="/">话题</a>
     </div>
     #if(!$isLogin)
     <div class="title_right">
@@ -29,18 +29,23 @@
         <a href="/login" target="_top">登录</a>
     </div>
     #else
+    <div class="logout">
+        <a href="/logout">退出登录</a>
+    </div>
+
     <div class="master_rignt">
         <div class="m_r_div1">
             <img src="/image/message.png">
         </div>
         <div class="m_r_div2">
-            <a href="/user/">
+            <a href="/user/$user.get('id')">
                 <img src="/image/my_pic.jpg">
 
                 <p>$user.get("name")</p>
             </a>
         </div>
     </div>
+
     #end
 </div>
 
@@ -89,6 +94,8 @@
                 <data>$answer.get("updateTime")</data>
                 <img src="/image/comment.png" class="comment_pic">
             </div>
+
+            <div class="clear"></div>
         </div>
 
         #end

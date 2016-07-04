@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>华科问答</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<div id="title" class="title" width="100%"></div>
+
+<div class="content" id="discoverContent">
+    <div class="c_top">
+
+        <div class="ct_top">
+            <div class="ctl_div">
+                <p>发现</p>
+            </div>
+            <div class="ctr_div">
+                <ul>
+                    <li id="page1" class="li_change">最新</li>
+                    <li id="page2" class="li_now">热门</li>
+                    <li id="page3" class="li_now">等待回复</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="ct_down">
+            <div class="div_show" id="cld_div1">
+                <!--#foreach ($question in ${questionList})-->
+                <div class="d_s_div"><!--所有主贴用这个class的样式-->
+                    <!--<p class="d_s_d_p">${question.get("title")}</p>-->
+                    <a href="detail.html"> <p class="d_s_d_p">东九被淹了怎么办</p> </a>
+                    <!--#if($answersMap.get($question).size() > 0)-->
+                    <div class="float_left">
+                        <div class="f_t_top">
+                            <img src="image/up.png">
+                            <!--这里的img可以在前面加a做链接-->
+                            <p>30</p>
+                        </div>
+                        <div class="f_t_down">
+                            <img src="image/down.png">
+                        </div>
+                    </div>
+
+                    <div class="float_right">
+                        <a href="self.html">
+                            <!--<h4>$answersMap.get($question).get(0).get("userName")</h4>
+                            <p>$answersMap.get($question).get(0).get("contant")</p>-->
+                            <h4>Huster</h4>
+                        </a>
+                        <a href="detail.html">
+                            <p>东九被淹了？我还在寝室睡觉呢</p>
+                        </a>
+                    </div>
+
+                    <!--#end-->
+
+                    <div class="clear"></div>
+
+                    <div class="f_r_com_div">
+                        <img src="image/comment.png" class="comment_pic">
+                        <!--<a href="detail.html"><span>$question.get("answerCount")个回答</span></a>-->
+                        <a href="detail.html"><span>1个回答</span></a>
+                        <img src="image/answer.png" class="answer_pic">
+                        <a href="detail.html"><span>添加回答</span></a>
+                    </div>
+                </div>
+
+                <!--#end-->
+
+            </div>
+
+            <div class="div_hidden" id="cld_div2">
+                <div class="d_s_div"><!--所有主贴用这个class的样式-->
+                    <!--<p class="d_s_d_p">${question.get("title")}</p>-->
+                    <p class="d_s_d_p">早上起不来晚上睡不着，好痛苦</p>
+                    <!--#if($answersMap.get($question).size() > 0)-->
+                    <div class="float_left">
+                        <div class="f_t_top">
+                            <img src="image/up.png">
+                            <!--这里的img可以在前面加a做链接-->
+                            <p>33</p>
+                        </div>
+                        <div class="f_t_down">
+                            <img src="image/down.png">
+                        </div>
+                    </div>
+
+                    <div class="float_right">
+                        <a href="detail.html">
+                            <!--<h4>$answersMap.get($question).get(0).get("userName")</h4>
+                            <p>$answersMap.get($question).get(0).get("contant")</p>-->
+                            <h4>Thulium</h4>
+                            <p>Rt</p>
+                        </a>
+                    </div>
+
+                    <!--#end-->
+
+                    <div class="clear"></div>
+
+                    <div class="f_r_com_div">
+                        <img src="image/comment.png" class="comment_pic">
+                        <!--<a href="detail.html"><span>$question.get("answerCount")个回答</span></a>-->
+                        <a href="detail.html"><span>3个回答</span></a>
+                        <img src="image/answer.png" class="answer_pic">
+                        <a href="detail.html"><span>添加回答</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_hidden" id="cld_div3">
+                <div class="d_s_div"><!--所有主贴用这个class的样式-->
+                    <!--<p class="d_s_d_p">${question.get("title")}</p>-->
+                    <p class="d_s_d_p">竜が我が敌を喰らう</p>
+                    <!--#if($answersMap.get($question).size() > 0)-->
+                    <div class="float_left">
+                        <div class="f_t_top">
+                            <img src="image/up.png">
+                            <!--这里的img可以在前面加a做链接-->
+                            <p>27</p>
+                        </div>
+                        <div class="f_t_down">
+                            <img src="image/down.png">
+                        </div>
+                    </div>
+
+                    <div class="float_right">
+                        <a href="detail.html">
+                            <!--<h4>$answersMap.get($question).get(0).get("userName")</h4>
+                            <p>$answersMap.get($question).get(0).get("contant")</p>-->
+                            <h4>Overwatch</h4>
+                            <p>开黑吗，我半藏特别6！</p>
+                        </a>
+                    </div>
+
+                    <!--#end-->
+
+                    <div class="clear"></div>
+
+                    <div class="f_r_com_div">
+                        <img src="image/comment.png" class="comment_pic">
+                        <!--<a href="detail.html"><span>$question.get("answerCount")个回答</span></a>-->
+                        <a href="detail.html"><span>13个回答</span></a>
+                        <img src="image/answer.png" class="answer_pic">
+                        <a href="detail.html"><span>添加回答</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+
+    <div class="c_right">
+        <p>今天你遇到了什么问题?</p>
+
+        <div class="p_form">
+            <form action="detail.html" method="post" accept-charset="UTF-8">
+                <input type="text" placeholder="写下你的问题" name="title">
+                <label for="miaoshu">问题说明:</label>
+                <textarea id="miaoshu" placeholder="问题的详细描述，选填" name="contant"></textarea>
+                <label for="huati">选择话题:</label>
+                <input type="text" id="huati">
+                <br>
+                <input type="submit" value="提交问题">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!--<div class="content1" id="topicContent">
+    <p>皆さん、このページは今できませんので、私たちは頑張れます！</p>
+    <p>竜が我が敌を喰らう</p>
+</div>-->
+
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/title.js"></script>
+
+</body>
+</html>

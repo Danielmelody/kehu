@@ -119,10 +119,13 @@ a {
 .d_s_div{
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    position: relative;
+    top: -10px;
 }
 
 .d_s_div_middle{
     left: 20px;
+    margin-top: 10px;
     max-height: 85px;
     position: relative;
     width: inherit;
@@ -175,7 +178,7 @@ a {
 
 .float_right p{
     color: black;
-    line-height: 18px;
+    line-height: 20px;
     margin: 5px 0;
     text-overflow: ellipsis;
     font-size: 13px;

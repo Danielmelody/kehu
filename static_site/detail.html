@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>问题详细界面</title>
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <script type="text/javascript" src="js/title.js"></script>
+</head>
+
+<body>
+
+<div id="title" class="title" width="100%" ></div>
+
+<div class="content">
+    <!--此处数据库得到的放内容-->
+    <div class="the_head">
+        <p>东九被淹了怎么办</p>
+    </div>
+
+    <div class="middle">
+        <div class="middle_top">
+            <p>每当东九路上被淹了，我就不想去上课，怎么办啊？</p>
+            <a href="#the_answer"><span><data>2015-11-09</data> <img src="image/answer.png"/> 添加回答</span> </a>
+        </div>
+        <div class="middle_down">
+            <p>1个回答</p>
+        </div>
+    </div>
+    <!--以下为所跟的帖的内容-->
+    <div class="bottom">
+
+
+        <!--#foreach($answer in $answers)-->
+        <!--所有跟贴用这个class的样式-->
+        <div class="d_s_div">
+            <div class="d_s_div_middle">
+                <div class="float_left">
+                    <div class="f_t_top">
+                        <img src="image/up.png">
+                        <p>30</p>
+                        <!--<p>$answer.get("agree")</p>-->
+                    </div>
+                    <div class="f_t_down">
+                        <img src="image/down.png">
+                    </div>
+                </div>
+                <div class="float_right">
+                    <!--<h4>$answer.get("userName")</h4>
+
+                    <p>$answer.get("contant")</p>-->
+                    <a href="self.html"><h4>Huster</h4></a>
+                    <p>东九被淹了？我还在寝室睡觉呢</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <div class="f_r_com_div">
+                <!--<data>$answer.get("updateTime")</data>-->
+                <data>2016-6-29</data>
+                <img src="image/comment.png" class="comment_pic">
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        <!--#end-->
+
+        <div class="the_answer" >
+            <a
+            <form>
+                <textarea class="textarea_part" name="answer" oninvalid="setCustomValidity('请填写内容')"
+                          oninput="setCustomValidity('')" required="required"></textarea>
+                <input class="my_submit" type="submit" value="发布回答">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

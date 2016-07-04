@@ -1,0 +1,252 @@
+@charset "utf-8";
+@import url("datastyle.css");
+@import url("title.css");
+
+html,
+body {
+    background-color: rgb(235, 244, 241);
+    font-family:  "microsoft yahei", arial;
+    height: 100%;
+    margin: 0;
+    min-width: 1000px;
+    padding: 0;
+    width: 100%;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+p {
+    margin: 0;
+}
+
+li {
+    float: left;
+    height: 30px;
+    list-style: none;
+    margin-left: 20px;
+}
+
+a {
+    color: #666;
+    outline: none;
+    text-decoration: none;
+}
+
+.float_right a:hover{
+    color:#55B6A2;
+}
+.clear {
+    clear: both;
+}
+
+/**
+ * 内容样式
+ */
+
+.content {
+    left: 50%;
+    margin: 30px 0 10px -500px;
+    position: relative;
+    width: 1000px;
+}
+
+/*左侧的样式*/
+.c_top {
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+    float: left;
+    margin-bottom: 10px;
+    /*height: 880px;*/
+    width: 588px;
+}
+
+.ct_top {
+    position: relative;
+    border-bottom: 2px solid #ddd;
+    height: 60px;
+    width: inherit;
+}
+
+.ctl_div {
+    float: left;
+    height: inherit;
+    width: 80px;
+}
+
+.ctl_div p {
+    color: rgb(94, 206, 184);
+    font-family: Arial;
+    font-size: 20px;
+    height: inherit;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+    width: inherit;
+}
+
+.ctr_div {
+    float: right;
+    height: inherit;
+    width: 300px;
+}
+
+.ctr_div ul li:hover {
+    cursor: pointer;
+    color: #333;
+}
+
+
+
+.li_now {
+    color: #999;
+    left: 50px;
+    position: relative;
+    top: 30px;
+}
+
+.li_change {
+    border-bottom: 2px solid rgb(94, 206, 184);
+    color: #333;
+    left: 50px;
+    position: relative;
+    top: 30px;
+}
+
+.ct_down {
+    /*height: 800px;*/
+    margin-left: 10px;
+    width: 568px;
+}
+
+.div_show {
+    color: #333;
+    margin-bottom: 10px;
+    min-height: 600px;
+    width: inherit;
+}
+
+.div_hidden {
+    display: none;
+}
+
+/*左侧话题内容样式为数据样式，件datastyle.css*/
+
+/*右侧的样式*/
+.c_right {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    display: inline-block;
+    float: left;
+    height: 450px;
+    margin-left: 20px;
+    width: 388px;
+}
+
+.c_right p {
+    color: rgb(117, 220, 210);
+    height: 25px;
+    line-height: 25px;
+    margin: 15px 0;
+    text-align: center;
+    width: inherit;
+}
+
+.p_form {
+    height: 360px;
+    width: inherit;
+}
+
+.p_form form input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    font-size: 15px;
+    height: 35px;
+    margin-left: 14px;
+    text-indent: 3px;
+    width: 360px;
+}
+
+.p_form form label {
+    color: #666;
+    display: block;
+    margin: 30px 0 5px 14px;
+}
+
+.p_form form textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 130px;
+    margin-left: 14px;
+    overflow: auto;
+    padding: 3px 0 0 3px;
+    resize: none;
+    width: 358px;
+}
+
+.p_form form input[type="submit"] {
+    background-color: rgb(95, 205, 183);
+    border: 0px solid;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    font-size: 13px;
+    height: 35px;
+    margin: 5px 10px 0 0;
+    text-indent: -2px;
+    width: 65px;
+}
+
+.p_form form input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+/**
+ * 第二块模板
+ */
+
+.content1 {
+    display: none;
+    height: 1000px;
+    left: 50%;
+    margin: 30px 0 10px -500px;
+    position: relative;
+    width: 1000px;
+}
+
+.content1 p{
+    font-size: 18px;
+    text-align: center;
+}

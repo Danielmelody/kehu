@@ -9,7 +9,7 @@
     <!--<iframe src="title.html" class="top"></iframe>-->
     <div class="title">
         <div class="set_word">
-            <img src="image/kehu.png">
+            <img src="/image/kehu.png">
         </div>
         <div class="title_search">
             <form>
@@ -18,20 +18,32 @@
             </form>
         </div>
         <div class="change_content">
-            <a target="_top" href="index.html" id="cc_p1" class="ccp">发现</a>
-            <a target="_top" href="" id="cc_p2" class="ccp">话题</a>
+            <a id="cc_p1" class="ccp_focus">发现</a>
+            <a id="cc_p2" class="ccp_now">话题</a>
         </div>
+        #if(!$isLogin)
+        <div class="title_right" >
+            <a href="/register" target="_top">注册</a>
+            <a href="/login" target="_top">登录</a>
+        </div>
+        #else
+        <div class="logout">
+            <p>退出登录</p>
+        </div>
+
         <div class="master_rignt">
             <div class="m_r_div1">
-                <img src="image/message.png">
+                <img src="/image/message.png">
             </div>
             <div class="m_r_div2">
-                <a target="_top" href="self.html">
-                    <img src="image/my_pic.jpg">
+                <a href="/user/">
+                    <img src="/image/my_pic.jpg">
                     <p>$user.get("name")</p>
                 </a>
             </div>
         </div>
+
+        #end
     </div>
 
     <div class="maintain">

@@ -44,6 +44,7 @@ public class User extends BaseModel {
         try {
             datas.put("id", Integer.toString(results.getInt("id")));
             datas.put("email", results.getString("email"));
+            datas.put("password", results.getString("password"));
             datas.put("name", results.getString("name"));
             datas.put("agree", results.getString("agree"));
             datas.put("disagree", results.getString("disagree"));

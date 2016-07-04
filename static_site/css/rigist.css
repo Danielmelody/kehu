@@ -1,0 +1,144 @@
+@charset "utf-8";
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: #eaf2f0;
+    font-family: "microsoft yahei", arial;
+    height: inherit;
+    left: -240px;
+    margin: 0;
+    margin-left: 50%;
+    padding: 0;
+    position: relative;
+    width: 480px;
+}
+
+a {
+    outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #666;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #666;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #666;
+}
+
+.title {
+    height: 40px;
+    width: inherit;
+}
+
+.title p {
+    color: rgb(95, 205, 183);
+    font-size: 36px;
+    font-weight: lighter;
+    line-height: 40px;
+    position: relative;
+    top: 70px;
+    text-align: center;
+}
+
+.rigist {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #292929;
+    -moz-box-shadow: 1px 1px 3px #292929;
+    -ms-box-shadow: 1px 1px 3px #292929;
+    -webkit-box-shadow: 1px 1px 3px #292929;
+    height: 360px;
+    position: relative;
+    top: 110px;
+    overflow: hidden;
+    width: inherit;
+}
+
+.rigist form {
+    height: inherit;
+    width: inherit;
+}
+
+.text_part {
+    border-bottom: 1px solid #ccc;
+    height: 60px;
+    left: 40px;
+    position: relative;
+    width: 400px;
+}
+
+.text_part input {
+    border: 0px solid;
+    font-size: 16px;
+    height: 30px;
+    position: relative;
+    text-indent: 3px;
+    top: 28px;
+    width: inherit;
+}
+
+.submit_div input {
+    background-color: #78ccbb;
+    border: 0px solid;
+    border-radius: 4px;
+    color: white;
+    font-family: "幼圆";
+    font-size: 24px;
+    height: 60px;
+    left: 40px;
+    position: relative;
+    top: 30px;
+    width: 400px;
+}
+
+.submit_div input:hover {
+    cursor: pointer;
+}
+
+.change_div {
+    height: 30px;
+    position: relative;
+    text-align: center;
+    top: 135px;
+    width: inherit;
+}
+
+.change_div a {
+    color: #78ccbb;
+    font-size: 12px;
+}

@@ -177,12 +177,34 @@ a {
 .master_rignt{
     float: right;
     height: inherit;
-    width: 200px;
+    width: 150px;
 }
 
 .master_rignt div{
     display: inline-block;
     float: left;
+}
+
+.logout{
+    float: right;
+    height: 50px;
+    left: -10px;
+    position: relative;
+    top: 1px;
+    width: 50px;
+    z-index: 2;
+}
+
+.logout a{
+    color: rgba(255, 255, 255, 50);
+    font-size: 12px;
+    height:inherit;
+    line-height: 50px;
+}
+
+.logout a:hover{
+    color: yellow;
+    cursor: pointer;
 }
 
 .m_r_div1{

@@ -1,5 +1,5 @@
 @import url("title.css");
-/**@import url("datastyle.css");*/
+@import url("datastyle.css");
 
 .clear_bottom_line{
     background-color: white;
@@ -199,7 +199,7 @@
 
 /**
  * 由于有些bug，就不引用了
- */
+
 .clear{
     clear: both;
     position: relative;
@@ -297,4 +297,4 @@
     margin: 0 -5px 0 5px;
     position: relative;
     top: 2px;
-}
+}*/

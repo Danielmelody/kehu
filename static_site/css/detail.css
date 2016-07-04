@@ -1,0 +1,262 @@
+@charset "utf-8";
+@import url("title.css");
+
+html,
+body {
+    background-color: rgb(235, 244, 241);
+    font-family:  "microsoft yahei", arial;
+    height: 100%;
+    margin: 0;
+    min-width: 1000px;
+    padding: 0;
+    width: 100%;
+}
+
+p,h4 {
+    margin: 0;
+}
+
+li {
+    float: left;
+    height: 30px;
+    list-style: none;
+    margin-left: 20px;
+}
+
+a {
+    color: #666;
+    outline: none;
+    text-decoration: none;
+}
+
+.clear{
+    clear: both;
+}
+
+/**
+ * 中间部分
+ */
+.content{
+    background-color: white;
+    border: 1px solid #ccc;
+    left: -500px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 50%;
+    position: relative;
+    width: 1000px;
+}
+
+.the_head{
+    border-bottom: 1px solid #eee;
+    height: 58px;
+    left: 5px;
+    position: relative;
+    width: 960px;
+}
+
+.the_head p{
+    color: rgb(2,130,104);
+    height: 58px;
+    left: 20px;
+    line-height: 58px;
+    position: relative;
+}
+
+.middle{
+    border-bottom: 1px solid #ccc;
+    height: 110px;
+    left: 5px;
+    position: relative;
+    width: 960px;
+}
+
+.middle_top{
+    height: 79px;
+    width: inherit;
+}
+
+.middle_top p{
+    color: rgb(123,124,124);
+    left: 20px;
+    position: relative;
+    top: 10px;
+}
+
+.middle_top span{
+    color: #bbb;
+    left: 20px;
+    position: relative;
+    top: 15px;
+}
+
+.middle_top span img{
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.middle_down{
+    height: 30px;
+    width: inherit;
+}
+
+.middle_down p{
+    color: #bbb;
+    font-size: 20px;
+    left: 20px;
+    position: relative;
+}
+
+.bottom{
+    border-bottom: 1px solid #eee;
+    left: 5px;
+    top:5px;
+    padding: 10px 0;
+    position: relative;
+    width: 960px;
+}
+
+/*内容样式的引用*/
+.d_s_div{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    position: relative;
+    top: -10px;
+}
+
+.d_s_div_middle{
+    left: 20px;
+    margin-top: 10px;
+    max-height: 85px;
+    position: relative;
+    width: inherit;
+}
+
+.float_left {
+    float: left;
+    text-align: center;
+    width: 35px;
+}
+
+.float_left div{
+    border-radius: 3px; 
+}
+
+.f_t_top{
+    background-color: rgb(238,248,246);
+    margin-bottom: 5px;
+    width: inherit;
+}
+
+.f_t_top p{
+    color: rgb(2,130,104);
+    padding: 5px 0;
+    position: relative;
+    top: -3px;
+}
+
+.float_left div:hover{
+    cursor: pointer;
+}
+
+.f_t_top:hover {
+    background-color:rgb(2,130,104);
+}
+.f_t_top p:hover{
+    color: white;
+}
+
+.f_t_down:hover{
+    background-color: #028268;
+}
+.f_t_down{
+    background-color: rgb(238,248,246);
+    width: inherit;
+}
+
+.float_right {
+    float: left;
+    margin-left: 10px;
+    max-height: 180px;
+    overflow: hidden;
+    width: 515px;
+}
+
+.float_right h4{
+    font-family: "华文仿宋";
+    font-weight: normal;
+}
+
+.float_right p{
+    color: black;
+    line-height: 20px;
+    margin: 5px 0;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    text-indent: 27px;
+}
+
+.f_r_com_div{
+    height: 20px;
+    left: 20px;
+    position: relative;
+    top: 3px;
+    width: inherit;
+}
+
+.f_r_com_div span{
+    color: #bbb;
+    font-size: 13px;
+}
+
+.f_r_com_div data{
+    color: #bbb;
+    font-size: 13px;
+}
+
+.comment_pic{
+    margin: 0 -5px 0 5px;
+    position: relative;
+    top: 3px;
+}
+
+.answer_pic{
+    margin: 0 -5px 0 5px;
+    position: relative;
+    top: 2px;
+}
+
+/*底部回答框*/
+.the_answer{
+    height: 210px;
+    margin: 20px 0 10px 0;
+    width: 1000px;
+}
+
+.textarea_part{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 147px;
+    margin-left: 20px;
+    padding-top: 3px;
+    resize: none;
+    text-indent: 3px;
+    width: 960px;
+}
+
+.my_submit{
+    background-color: rgb(94, 206, 184);
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    font-size: 16px;
+    height: 45px;
+    margin-right: 15px;
+    margin-top: 8px;
+    width: 80px;
+}
+
+.my_submit:hover{
+    cursor: pointer;
+}

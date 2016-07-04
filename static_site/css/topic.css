@@ -1,0 +1,412 @@
+@charset "utf-8";
+@import url("datastyle.css");
+@import url("title.css");
+
+html,
+body {
+    background-color: rgb(235, 244, 241);
+    font-family:  "microsoft yahei", arial;
+    height: 100%;
+    margin: 0;
+    min-width: 1000px;
+    padding: 0;
+    width: 100%;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+p {
+    margin: 0;
+}
+
+li {
+    float: left;
+    height: 30px;
+    list-style: none;
+    margin-left: 20px;
+}
+
+a {
+    color: #666;
+    outline: none;
+    text-decoration: none;
+}
+
+.float_right a:hover{
+    color:#55B6A2;
+}
+.clear {
+    clear: both;
+}
+
+/**
+ * 内容样式
+ */
+
+.content {
+    left: 50%;
+    margin: 30px 0 10px -500px;
+    position: relative;
+    width: 1000px;
+}
+
+/*左侧的样式*/
+.c_top {
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+    float: left;
+    margin-bottom: 10px;
+    /*height: 880px;*/
+    width: 65%;
+}
+
+.ct_top {
+    position: relative;
+    border-bottom: 2px solid #ddd;
+    height: 60px;
+    width: 100%;
+}
+
+.ctl_div {
+    float: left;
+    height: inherit;
+    width: 80px;
+}
+
+.ctl_div p {
+    color: rgb(94, 206, 184);
+    font-family: Arial;
+    font-size: 20px;
+    height: inherit;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+    width: inherit;
+}
+
+.ctr_div {
+    float: right;
+    height: inherit;
+    width: 300px;
+}
+
+.ctr_div ul li:hover {
+    cursor: pointer;
+    color: #333;
+}
+
+
+
+.li_now {
+    color: #999;
+    left: 50px;
+    position: relative;
+    top: 30px;
+}
+
+.li_change {
+    border-bottom: 2px solid rgb(94, 206, 184);
+    color: #333;
+    left: 50px;
+    position: relative;
+    top: 30px;
+}
+
+.ct_middle{
+    display: block;
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    zoom:1;
+}
+.ct_middle ul{
+    display: block;
+    margin-bottom: 10px;
+}
+.ct_middle ul li{
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    height: 24px;
+    background-color: white;
+    border: 1px solid #028268;
+    border-radius: 12px;
+    padding: 0 7px;
+    color: #028268;
+    font-size: 13px;
+    line-height: 24px;
+    box-shadow: 0 0 2px #aaa;
+}
+
+.ct_middle ul li:hover {
+    cursor: pointer;
+    background-color: #028268;
+    color: white;
+}
+
+.ct_middle ul .ct_active {
+    background-color: #028268;
+    color: white;
+}
+.tpc_description{
+    width: 100%;
+    /*border-bottom: 1px solid #eee;*/
+    background-color:  #f5fefc;
+    overflow: hidden;
+    zoom: 1;
+}
+.tpc_img{
+    width: 12%;
+    float: left;
+    margin: 18px;
+}
+.tpc_img img{
+    width: 80px;
+    height: 80px;
+    border-radius: 4px ;
+}
+.cancel_att{
+    display: block;
+    background-color:  rgb(235, 244, 241);
+    border: 0 solid;
+    border-radius: 5px;
+    color: #999;
+    font-size: 13px;
+    height: 35px;
+    margin: 10px 10px 0 0;
+    width:80px;
+    box-shadow: 0 0 4px #aaa;
+}
+.cancel_att:hover{
+    cursor: pointer;
+    background-color: #4a9a8a;
+    color: white;
+}
+
+.add_att{
+    display: block;
+    background-color: #4a9a8a;
+    color: white;
+    border: 0 solid;
+    border-radius: 5px;
+    font-size: 13px;
+    height: 35px;
+    margin: 10px 10px 0 0;
+    width:80px;
+    box-shadow: 0 0 4px #aaa;
+}
+.add_att:hover{
+    cursor: pointer;
+    background-color:  rgb(235, 244, 241);
+    color: #999;
+}
+
+.tpc_detail{
+    float: right;
+    width: 80%;
+
+}
+.tpc_detail h1{
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #333;
+    font-weight: normal;
+    margin: 18px 0 0 ;
+}
+.tpc_detail h2{
+    font-size: 14px;
+    margin-top: 8px;
+    margin-right: 20px;
+    line-height: 20px;
+    color: #999;
+    font-weight: normal;
+
+}
+.tpc_data{
+    margin-top: 38px;
+}
+.tpc_data p{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 13px;
+    color: #aaaaaa;
+
+}
+.ct_down {
+    /*height: 800px;*/
+    margin-left: 10px;
+    width: 710px;
+}
+
+.div_show {
+    color: #333;
+    margin-bottom: 10px;
+    min-height: 600px;
+    width: 88%;
+}
+
+.div_hidden {
+    display: none;
+}
+
+/*左侧话题内容样式为数据样式，见datastyle.css*/
+
+/*右侧的样式*/
+.c_right {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    display: inline-block;
+    float: left;
+    height: inherit;
+    margin-left: 20px;
+    width: 30%;
+}
+.otherTopic{
+    border-bottom: 1px solid #EEE;
+    overflow: hidden;
+    zoom: 1;
+}
+.otherTopic ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-top: 14px;
+}
+.otherTopic ul li{
+
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    height: 24px;
+    background-color: white;
+    border: 1px solid #028268;
+    border-radius: 12px;
+    padding: 0 7px;
+    color: #028268;
+    font-size: 13px;
+    line-height: 24px;
+    box-shadow: 0 0 2px #aaa;
+}
+.otherTopic ul li:hover{
+    cursor: pointer;
+    background-color: #028268;
+    color: white;
+}
+
+
+.c_right p{
+    height: 34px;
+    background-color: #78ccbb;
+    font-size: 16px;
+    line-height: 34px;
+    text-indent: 18px;
+    color: #028268;
+}
+
+.t_form {
+    height: 360px;
+    width: inherit;
+
+}
+
+.t_form form input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    font-size: 15px;
+    height: 35px;
+    margin-top: 14px;
+    margin-left: 14px;
+    text-indent: 3px;
+    width: 80%;
+}
+
+.t_form form label {
+    color: #666;
+    display: block;
+    margin: 14px 0 5px 14px;
+}
+
+.t_form form textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 130px;
+    margin-left: 14px;
+    overflow: auto;
+    padding: 3px 0 0 3px;
+    resize: none;
+    width: 80%;
+}
+
+.t_form form input[type="submit"] {
+    background-color: rgb(95, 205, 183);
+    border: 0px solid;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    font-size: 13px;
+    height: 35px;
+    margin: 10px 10px 0 0;
+    text-indent: -2px;
+    width: inherit;
+    box-shadow: 0 0 4px #aaa;
+}
+
+.t_form form input[type="submit"]:hover{
+    cursor: pointer;
+
+}
+
+/**
+ * 第二块模板
+ */
+
+.content1 {
+    display: none;
+    height: 1000px;
+    left: 50%;
+    margin: 30px 0 10px -500px;
+    position: relative;
+    width: 1000px;
+}
+
+.content1 p{
+    font-size: 18px;
+    text-align: center;
+}

@@ -13,18 +13,18 @@
         <p>Welcome,Huster!</p>
     </div>
     <div class="rigist">
-        <form>
+        <form action="/register" accept-charset="UTF-8">
             <div class="text_part">
-                <input type="email" placeholder="电子邮箱" oninvalid="setCustomValidity('请填写邮箱')" oninput="setCustomValidity('')" required="required">
+                <input type="email" name="email" placeholder="电子邮箱" oninvalid="setCustomValidity('请填写邮箱')" oninput="setCustomValidity('')" required="required">
             </div>
             <div class="text_part">
-                <input type="account" placeholder="用户名" oninvalid="setCustomValidity('请填写用户名')" oninput="setCustomValidity('')" required="required">
+                <input type="account" name="name" placeholder="用户名" oninvalid="setCustomValidity('请填写用户名')" oninput="setCustomValidity('')" required="required">
             </div>
             <div class="text_part">
-                <input type="password" placeholder="密码" oninvalid="setCustomValidity('请填写密码')" oninput="setCustomValidity('')" required="required">
+                <input type="password" name="password" placeholder="密码" oninvalid="setCustomValidity('请填写密码')" oninput="setCustomValidity('')" required="required">
             </div>
             <div class="text_part">
-                <input type="password" placeholder="确认密码" oninvalid="setCustomValidity('请确认密码')" oninput="setCustomValidity('')" required="required">
+                <input type="password" name="password_t" placeholder="确认密码" oninvalid="setCustomValidity('请确认密码')" oninput="setCustomValidity('')" required="required">
             </div>
             <div class="submit_div">
                 <input type="submit" value="注册">

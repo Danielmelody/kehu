@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>修改信息</title>
+    <link rel="stylesheet" type="text/css" href="css/information.css">
+    <script type="text/javascript" src="js/title.js"></script>
+</head>
+<body>
+    <!--<iframe src="title.html" class="top"></iframe>-->
+    <div id="title" class="title" width="100%"></div>
+
+    <div class="maintain">
+        <form action="self.html" method="post">
+
+            <div class="the_top">
+                <!--<span name="span_1">$user.get("name")</span>-->
+                <span name="span_1">Huster</span>
+                <span name="span_2">&gt;&gt;</span>
+                <span name="span_3">编写个人资料</span>
+                <a href="self.html" target="_top" class="the_top_a">返回个人主页</a>
+            </div>
+            <div class="input_part">
+                <label for="text1" name="text">用户名</label>
+                <input type="text" name="text" id="text1">
+            </div>
+            <div class="chang_part">
+                <p>
+                    <label name="title">头像</label>
+                    <img src="image/my_pic.jpg">
+                    <input type="button" value="选择头像">
+                </p>
+            </div>
+            <div class="chang_part">
+                <p>
+                    <label name="title">个人介绍</label>
+                    <textarea></textarea>
+                </p>
+            </div>
+            <div class="input_part">
+                <label name="text">性别</label>
+                <input type="radio" name="radio" id="radio1" checked="checked">
+                <label for="radio1" name="radio">男</label>
+                <input type="radio" name="radio" id="radio2">
+                <label for="radio2" name="radio">女</label>
+            </div>
+            <div class="input_part">
+                <label for="text2" name="text">年龄</label>
+                <input type="text" name="text" id="text2">
+            </div>
+            <div class="input_part">
+                <label for="text3" name="text">院系</label>
+                <input type="text" name="text" id="text3">
+            </div>
+            <div class="the_footer">
+                <input type="reset" name="reset" value="取消修改">
+                <input type="submit" name="submit" value="保存修改">
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

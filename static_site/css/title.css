@@ -1,0 +1,285 @@
+@charset "utf-8";
+html,
+body {
+    background-color: rgb(235, 244, 241);
+    font-family: "microsoft yahei", arial;
+    height: 100%;
+    margin: 0;
+    min-width: 1000px;
+    padding: 0;
+    width: 100%;
+}
+
+
+input::-webkit-input-placeholder{
+    color: #999;
+    font-size: 14px;
+}
+
+input:-moz-placeholder{
+    color: #666;
+    font-size: 14px;
+}
+
+input::-moz-placeholder{
+    color: #666;
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder{
+    color: #666;
+    font-size: 14px;
+}
+
+p,h2,h4 {
+    margin: 0;
+}
+
+a {
+    color: #666;
+    outline: none;
+    text-decoration: none;
+}
+
+.top{
+    border: 0px solid;
+    height: 50px;
+    width: inherit;
+}
+
+.title {
+    background-color: rgb(94, 206, 184);
+    height: 50px;
+    width: inherit;
+    z-index: 100;
+    box-shadow: 0 0 6px #aaa;
+}
+
+.navigation{
+    position:fixed;
+    background-color: rgb(94, 206, 184);
+    height: 50px;
+    width: inherit;
+    z-index: 100;
+}
+
+.set_word {
+    /*    background-color: yellow;*/
+    float: left;
+    height: inherit;
+    width: 280px;
+}
+
+.set_word img{
+    left: 160px;
+    position: relative;
+    top: 8px;
+}
+
+.title_search {
+    background-color: white;
+    border-radius: 5px;
+    float: left;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    width: 320px;
+}
+
+.submit {
+    background-image: url("../image/search.png");
+    background-repeat: no-repeat;
+    background-color: rgb(70, 193, 163);
+    background-position: 11px 8px;
+    border: 0px solid;
+    border-radius: 0px;
+    float: right;
+    height: 40px;
+    position: relative;
+    width: 46px;
+}
+
+.submit:hover{
+    cursor: pointer;
+}
+
+#ts_search {
+    border: 0px solid;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 40px;
+    margin-bottom: 5px;
+    outline: none;
+    text-indent: 3px;
+    width: 265px;
+}
+
+.change_content {
+    float: left;
+    height: inherit;
+    width: 200px;
+}
+
+.change_content a:hover {
+    cursor: pointer;
+}
+
+.ccp_now {
+    color:  rgb(235, 244, 241);
+    float: left;
+    font-size: 18px;
+    height: inherit;
+    line-height: 50px;
+    left: 30px;
+    position: relative;
+    text-align: center;
+    width: 60px;
+}
+
+.ccp_focus {
+    background-color: #55B6A2;
+    color:  rgb(235, 244, 241);
+    float: left;
+    font-size: 18px;
+    height: inherit;
+    line-height: 50px;
+    left: 30px;
+    position: relative;
+    text-align: center;
+    width: 60px;
+}
+
+.ccp {
+    color: #55B6A2;
+    float: left;
+    font-size: 18px;
+    height: inherit;
+    line-height: 50px;
+    left: 30px;
+    position: relative;
+    text-align: center;
+    width: 60px;
+}
+
+.change_content a:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.title_right {
+    float: right;
+    height: inherit;
+    width: 200px;
+}
+
+.title_right a {
+    float: right;
+    line-height: 50px;
+    margin: 0 10px 0 0;
+    position: relative;
+    right: 100px;
+}
+
+.title_right a:hover {
+    color: #FFFFFF;
+}
+
+.master_rignt{
+    float: right;
+    height: inherit;
+    width: 150px;
+}
+
+.master_rignt div{
+    display: inline-block;
+    float: left;
+}
+
+.logout{
+    float: right;
+    height: 50px;
+    left: -10px;
+    position: relative;
+    top: 1px;
+    width: 50px;
+    z-index: 2;
+}
+
+.logout a{
+    color: rgba(255, 255, 255, 50);
+    font-size: 12px;
+    height:inherit;
+    line-height: 50px;
+}
+
+.logout a:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+.m_r_div1{
+    height: inherit;
+    width: 40px;
+}
+
+.m_r_div1 img{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.m_r_div1:hover{
+    background-color: #55B6A2;
+}
+.m_r_div2{
+    height: inherit;
+    width: 110px;
+}
+
+.m_r_div2:hover{
+    background-color: #55B6A2;
+    cursor: pointer;
+}
+
+.m_r_div2 img{
+    height: 30px;
+    left: 18px;
+    position: relative;
+    width: 30px;
+    top: 10px;
+}
+
+.m_r_div2 a p{
+    color: white;
+    display: inline-block;
+    float: right;
+    height: 20px;
+    left: 28px;
+    position: relative;
+    right: 10px;
+    top: 15px;
+    width: 80px;
+}
+#news{
+    position: fixed;
+    z-index:100;
+    width: 25%;
+    height:400px;
+    background-color:rgb(235, 244, 241);
+    left: 60%;
+    top: 55px;
+    box-shadow: 0 0 6px #aaa;
+    display:none;
+}
+#news p{
+    height: 40px;
+    border-bottom:1px solid #ccc ;
+    background-color: rgb(235, 244, 241);
+    font-size: 14px;
+    line-height:40px;
+    text-indent: 2em;
+    color: #666;
+}
+#news p:hover{
+    background-color: white;
+}

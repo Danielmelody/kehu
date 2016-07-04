@@ -1,133 +1,142 @@
 <!DOCTYPE html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>华科问答</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script type="text/javascript" src="js/change.js"></script>
 </head>
 
 <body>
-    <div class="title">
-        <div class="set_word">
-            <img src="/image/kehu.png">
-        </div>
-        <div class="title_search">
-            <form>
-                <input type="search" id="ts_search">
-                <input type="submit" class="submit" value="">
-            </form>
-        </div>
-        <div class="change_content">
-            <a id="cc_p1" class="ccp_focus">发现</a>
-            <a id="cc_p2" class="ccp_now">话题</a>
-        </div>
-        #if(!$isLogin)
-        <div class="title_right" >
-            <a href="/register" target="_top">注册</a>
-            <a href="/login" target="_top">登录</a>
-        </div>
-        #else
-        <div class="master_rignt">
-            <div class="m_r_div1">
-                <img src="/image/message.png">
-            </div>
-            <div class="m_r_div2">
-                <a href="/user/">
-                    <img src="/image/my_pic.jpg">
-                    <p>$user.get("name")</p>
-                </a>
-            </div>
-        </div>
-        #end
+<div class="title">
+    <div class="set_word">
+        <img src="/image/kehu.png">
+    </div>
+    <div class="title_search">
+        <form>
+            <input type="search" id="ts_search">
+            <input type="submit" class="submit" value="">
+        </form>
+    </div>
+    <div class="change_content">
+        <a id="cc_p1" class="ccp_focus" href="/">发现</a>
+        <a id="cc_p2" class="ccp_now" href="/">话题</a>
+    </div>
+    #if(!$isLogin)
+    <div class="title_right">
+        <a href="/register" target="_top">注册</a>
+        <a href="/login" target="_top">登录</a>
+    </div>
+    #else
+    <div class="logout">
+        <a href="/logout">退出登录</a>
     </div>
 
-    <div class="content" id="content">
-        <div class="c_top">
+    <div class="master_rignt">
+        <div class="m_r_div1">
+            <img src="/image/message.png">
+        </div>
+        <div class="m_r_div2">
+            <a href="/user/$user.get('id')">
+                <img src="/image/my_pic.jpg">
 
-            <div class="ct_top">
-                <div class="ctl_div">
-                    <p>发现</p>
-                </div>
-                <div class="ctr_div">
-                    <ul>
-                        <li id="page1" class="li_change">最新</li>
-                        <li id="page2" class="li_now">热门</li>
-                        <li id="page3" class="li_now">等待回复</li>
-                    </ul>
-                </div>
+                <p>$user.get("name")</p>
+            </a>
+        </div>
+    </div>
+
+    #end
+</div>
+
+<div class="content" id="content">
+    <div class="c_top">
+
+        <div class="ct_top">
+            <div class="ctl_div">
+                <p>发现</p>
             </div>
+            <div class="ctr_div">
+                <ul>
+                    <li id="page1" class="li_change">最新</li>
+                    <li id="page2" class="li_now">热门</li>
+                    <li id="page3" class="li_now">等待回复</li>
+                </ul>
+            </div>
+        </div>
 
-            <div class="ct_down">
-                <div class="div_show" id="cld_div1">
-                    #foreach ($question in ${questionList})
-                    <div class="d_s_div"><!--所有主贴用这个class的样式-->
-                        <p class="d_s_d_p">${question.get("title")}</p>
-                        #if($answersMap.get($question).length > 0)
-                        <div class="float_left">
-                            <div class="f_t_top">
-                                <img src="/image/up.png">
-                                <!--这里的img可以在前面加a做链接-->
-                                <p>30</p>
-                            </div>
-                            <div class="f_t_down">
-                                <img src="/image/down.png">
-                            </div>
+        <div class="ct_down">
+            <div class="div_show" id="cld_div1">
+                #foreach ($question in ${questionList})
+                <div class="d_s_div"><!--所有主贴用这个class的样式-->
+                    <p class="d_s_d_p">${question.get("title")}</p>
+                    #if($answersMap.get($question).size() > 0)
+                    <div class="float_left">
+                        <div class="f_t_top">
+                            <img src="/image/up.png">
+                            <!--这里的img可以在前面加a做链接-->
+                            <p>30</p>
                         </div>
+                        <div class="f_t_down">
+                            <img src="/image/down.png">
+                        </div>
+                    </div>
 
-                        <div class="float_right">
+                    <div class="float_right">
+                        <a href="/q/$question.get('id')">
                             <h4>$answersMap.get($question).get(0).get("userName")</h4>
                             <p>$answersMap.get($question).get(0).get("contant")</p>
-                        </div>
-
-                        #end
-
-                        <div class="clear"></div>
-
-                        <div class="f_r_com_div">
-                            <img src="/image/comment.png" class="comment_pic">
-                            <a href="/q/${question.get('id')}"><span>$question.get("answerCount")个回答</span></a>
-                            <img src="/image/answer.png" class="answer_pic">
-                            <a href="/q/${question.get('id')}" ><span>添加回答</span></a>
-                        </div>
+                        </a>
                     </div>
 
                     #end
 
+                    <div class="clear"></div>
+
+                    <div class="f_r_com_div">
+                        <img src="/image/comment.png" class="comment_pic">
+                        <a href="/q/${question.get('id')}"><span>$question.get("answerCount")个回答</span></a>
+                        <img src="/image/answer.png" class="answer_pic">
+                        <a href="/q/${question.get('id')}"><span>添加回答</span></a>
+                    </div>
                 </div>
 
-                <div class="div_hidden" id="cld_div2">
-                    222
-                </div>
+                #end
 
-                <div class="div_hidden" id="cld_div3">
-                    333
-                </div>
             </div>
 
-            <div class="clear"></div>
+            <div class="div_hidden" id="cld_div2">
+                222
+            </div>
 
-        </div>
-
-        <div class="c_right">
-            <p>今天你遇到了什么问题?</p>
-            <div class="p_form">
-                <form action="/q/new" method="post" accept-charset="UTF-8">
-                    <input type="text" placeholder="写下你的问题" name="title" >
-                    <label for="miaoshu">问题说明:</label>
-                    <textarea id="miaoshu" placeholder="问题的详细描述，选填" name="contant"></textarea>
-                    <label for="huati">选择话题:</label>
-                    <input type="text" id="huati">
-                    <br>
-                    <input type="submit" value="提交问题">
-                </form>
+            <div class="div_hidden" id="cld_div3">
+                333
             </div>
         </div>
 
+        <div class="clear"></div>
+
     </div>
 
-    <div class="content1" id="content1">
-        <p>皆さん、このページは今できませんので、私たちは頑張れます！</p>
+    <div class="c_right">
+        <p>今天你遇到了什么问题?</p>
+
+        <div class="p_form">
+            <form action="/q/new" method="post" accept-charset="UTF-8">
+                <input type="text" placeholder="写下你的问题" name="title">
+                <label for="miaoshu">问题说明:</label>
+                <textarea id="miaoshu" placeholder="问题的详细描述，选填" name="contant"></textarea>
+                <label for="huati">选择话题:</label>
+                <input type="text" id="huati">
+                <br>
+                <input type="submit" value="提交问题">
+            </form>
+        </div>
     </div>
+
+</div>
+
+<div class="content1" id="content1">
+    <p>皆さん、このページは今できませんので、私たちは頑張れます！</p>
+</div>
 </body>
 </html>
